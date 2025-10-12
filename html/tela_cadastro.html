@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres para suportar acentuação -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Garante compatibilidade com versões antigas do IE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade para dispositivos móveis -->
+
+
+    <link rel="stylesheet" href="../css/page/tela_cadastro.css"> <!-- Importa o arquivo de estilo externo -->
+    <link rel="stylesheet" href="../css/tools/btn_cadastrar-se.css"> <!-- Importa o arquivo de estilo externo -->
+    <link rel="icon" type="image/png" href="favicon.png"> <!-- Ícone da aba (opcional) -->
+    <script src="../js/page/tela_cadastro/tela_cadastro.js"></script>
+
+    <meta name="description" content="Descrição breve da página para SEO e acessibilidade.">
+    <meta name="author" content="Gabriel Ferreira"> <!-- Autor da página -->
+</head>
+<body><!-- Conteúdo principal começa aqui -->
+<div class="container">
+
+        <div class="image-section">
+            <img src="../img/img/tela_cadastro/imagem_da_fazenda.png" alt="Fazenda de café">
+        </div>
+        <div class="form-section"><!-- classe do formulário -->
+            <div class="logo">INESCAFÉ</div><!-- titulo da página -->
+            <p class="tagline">Todo dia começa melhor com um bom café, receba um gole de inspiração.</p>
+            
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="fullName">Nome completo</label>
+                    <input type="text" id="fullName" placeholder="Digite o seu nome completo..." required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="Digite o seu E-mail..." required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" placeholder="Digite a sua senha..." required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirmPassword">Confirmar senha</label>
+                    <input type="password" id="confirmPassword" placeholder="Repita a sua senha..." required>
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">Concordo com os <a href="#">Termos de Uso</a> e <a href="#">Política de Privacidade</a></label>
+                </div>
+                
+                <button type="submit" class="btn">Cadastrar-se</button>
+            </form>
+            
+            <p class="login-link">Já tem uma conta? <a href="#">Faça login</a></p>
+        </div>
+    </div>
+    
+</body>
+</html>
