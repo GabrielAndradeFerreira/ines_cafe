@@ -1,4 +1,4 @@
-namespace CafeAPiModels;
+namespace ApiInescafe.Models;
 
 public class SignaturePlanMembers
 {

@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace CafeAPiModels;
+namespace ApiInescafe.Models;
 
 public class NewsletterContact
 {

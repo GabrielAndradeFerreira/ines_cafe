@@ -1,3 +1,5 @@
+namespace ApiInescafe.Models.Enums;
+
 public enum EnumGrade
 {
     One = 1,

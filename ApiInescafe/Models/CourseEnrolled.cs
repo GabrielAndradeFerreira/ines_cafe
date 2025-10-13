@@ -1,6 +1,4 @@
-using ApiInescafe.Models;
-
-namespace CafeAPiModels;
+namespace ApiInescafe.Models;
 
 public class CourseEnrolled
 {

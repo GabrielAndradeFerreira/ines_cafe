@@ -1,5 +1,5 @@
-using ApiInescafe.Models;
-using CafeAPiModels;
+using ApiInescafe.Models.Enums;
+namespace ApiInescafe.Models;
 
 public class Review
 {
