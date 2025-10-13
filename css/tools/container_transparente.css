@@ -1,0 +1,28 @@
+.container {
+            display: flex;
+            width: 65%;
+            min-width: 40%;
+            max-width: 90%;
+            height: 60%;
+            min-height: 600px;
+            max-height: 850px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin: 0 auto;
+            margin-top: 3%;
+            background-color: rgba(255, 255, 255, 0.60);
+            /*backdrop-filter: blur(10px); /* Efeito de vidro fosco */
+            /*-webkit-backdrop-filter: blur(10px); /* Para compatibilidade */
+        }
+                
+        .form-section {
+            flex: 1;
+            /*padding: 50px;*/
+            /*background-color: #781D42;*/
+            padding-left: 90px;
+            padding-right: 90px;
+            padding-bottom: 90px;
+            padding-top: 70px;
+            background-color: rgba(163, 66, 60, 0.70);
+        }
