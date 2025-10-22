@@ -1,0 +1,9 @@
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        
+        .checkbox-group input {
+            margin-right: 10px;
+        }
