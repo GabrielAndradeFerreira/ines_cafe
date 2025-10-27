@@ -1,0 +1,44 @@
+# Este é o arquivo docker-compose.yml completo e CORRIGIDO
+services:
+  # 1. Serviço da sua Web API
+  apiinescafe:
+    image: apiinescafe
+    container_name: minha-api 
+    build:
+      context: .
+      dockerfile: ApiInescafe/Dockerfile 
+    ports:
+      - "5183:5183" 
+    environment:
+      # --- CORREÇÃO 1: A VARIÁVEL ESTÁ AQUI AGORA ---
+      - ASPNETCORE_ENVIRONMENT=Development
+      # ---
+      - ASPNETCORE_ConnectionStrings__DefaultConnection=Server=db,1433;Database=Inescafe;User=sa;Password=${DB_PASSWORD};TrustServerCertificate=True;
+    depends_on:
+      # --- CORREÇÃO 2: ESPERAR O DB FICAR SAUDÁVEL ---
+      db:
+        condition: service_healthy
+
+  # 2. Serviço do Banco de Dados
+  db:
+    container_name: sql-server-db
+    image: "mcr.microsoft.com/mssql/server:2022-latest"
+    ports:
+      - "14330:1433" 
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=${DB_PASSWORD}
+      # A variável ASPNETCORE_ENVIRONMENT foi REMOVIDA DAQUI
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+    # --- CORREÇÃO 2 (continuação): DEFINIÇÃO DO HEALTHCHECK ---
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P \"${DB_PASSWORD}\" -Q \"SELECT 1\" || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
+volumes:
+  sqlserver_data:
+

@@ -1,6 +1,7 @@
 using System.Runtime.CompilerServices;
 using ApiInescafe.Data;
 using ApiInescafe.DTOs.Product;
+using ApiInescafe.DTOs.Review;
 using ApiInescafe.Models;
 using Azure;
 using Microsoft.EntityFrameworkCore;
@@ -44,10 +45,24 @@ public class ProductService : IProductService
         }
     }
 
-    public Task<ResponseModel<List<ProductModel>>> CreateReviewAsync(int id)
-    {
-        
-    }
+    // public async Task<ResponseModel<List<ProductModel>>> CreateReviewAsync(CreateReviewDto review)
+    // {
+    //     var response = new ResponseModel<List<ProductModel>>();
+    //     try
+    //     {
+    //         var Product = product.Data;
+    //         var review = new CreateReviewDto
+    //         {
+    //         };
+    //         return response;
+    //     }
+    //     catch (Exception e)
+    //     {
+    //         response.Message = "Erro ao recuperar os produtos: " + e.Message;
+    //         response.Status = false;
+    //         return response;
+    //     }
+    // }
 
     public async Task<ResponseModel<List<ProductModel>>> DeleteProductAsync(int id)
     {
@@ -76,10 +91,10 @@ public class ProductService : IProductService
         }
     }
 
-    public Task<ResponseModel<List<ProductModel>>> DeleteReviewAsync(int id)
-    {
+    // public Task<ResponseModel<List<ProductModel>>> DeleteReviewAsync(int ProductId)
+    // {
         
-    }
+    // }
 
     public async Task<ResponseModel<List<ProductModel>>> GetAllProductsAsync()
     {

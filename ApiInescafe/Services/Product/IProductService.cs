@@ -9,8 +9,8 @@ public interface IProductService
     Task<ResponseModel<ProductModel>> GetProductByIdAsync(int id);
     Task<ResponseModel<List<ProductModel>>> GetProductBySubstringAsync(string substring);
     Task<ResponseModel<List<ProductModel>>> CreateProductAsync(ProductCreateDto product);
-    Task<ResponseModel<List<ProductModel>>> CreateReviewAsync(int id);
+    // Task<ResponseModel<List<ProductModel>>> CreateReviewAsync(int ProductId);
     Task<ResponseModel<List<ProductModel>>> UpdateProductAsync(ProductEditDto product);
     Task<ResponseModel<List<ProductModel>>> DeleteProductAsync(int id);
-    Task<ResponseModel<List<ProductModel>>> DeleteReviewAsync(int id);
+    // Task<ResponseModel<List<ProductModel>>> DeleteReviewAsync(int ProductId);
 }
