@@ -45,24 +45,53 @@ public class ProductService : IProductService
         }
     }
 
-    // public async Task<ResponseModel<List<ProductModel>>> CreateReviewAsync(CreateReviewDto review)
-    // {
-    //     var response = new ResponseModel<List<ProductModel>>();
-    //     try
-    //     {
-    //         var Product = product.Data;
-    //         var review = new CreateReviewDto
-    //         {
-    //         };
-    //         return response;
-    //     }
-    //     catch (Exception e)
-    //     {
-    //         response.Message = "Erro ao recuperar os produtos: " + e.Message;
-    //         response.Status = false;
-    //         return response;
-    //     }
-    // }
+    public async Task<ResponseModel<List<ReviewModel>>> CreateReviewAsync(CreateReviewDto review, int userId)
+        {
+            var response = new ResponseModel<List<ReviewModel>>();
+            try
+            {
+                var product = await _context.Products.Include(p => p.Reviews).FirstOrDefaultAsync(p => p.Id == review.ProductId);
+                if (product == null)
+                {
+                    response.Status = false;
+                    response.Message = "Produto não encontrado.";
+                    return response;
+                }
+
+                var userHasReviewed = product.Reviews.Any(r => r.UserId == userId);
+                if (userHasReviewed)
+                {
+                    response.Status = false;
+                    response.Message = "Usuário já fez uma avaliação para este produto.";
+                    return response;
+                }
+
+                var newReview = new ReviewModel
+                {
+                    ProductId = review.ProductId,
+                    UserId = userId,
+                    Comment = review.Comment,
+                    Rating = review.Rating,
+                    CreatedAt = DateTime.UtcNow
+                };
+
+                _context.Reviews.Add(newReview);
+                await _context.SaveChangesAsync();
+                var reviews = (await _context.Reviews.ToListAsync())
+                    .Where(r => r.ProductId == review.ProductId)
+                    .OrderByDescending(r => r.CreatedAt)
+                    .ToList();
+                response.Data = reviews;
+                response.Message = "Avaliação criada com sucesso.";
+                return response;
+            }
+            catch (Exception e)
+            {
+                response.Message = "Erro ao criar a avaliação: " + e.Message;
+                response.Status = false;
+                return response;
+            }
+        }
 
     public async Task<ResponseModel<List<ProductModel>>> DeleteProductAsync(int id)
     {
@@ -91,10 +120,50 @@ public class ProductService : IProductService
         }
     }
 
-    // public Task<ResponseModel<List<ProductModel>>> DeleteReviewAsync(int ProductId)
-    // {
-        
-    // }
+    public async Task<ResponseModel<List<ReviewModel>>> DeleteReviewAsync(int ProductId, int userId)
+        {
+            var response = new ResponseModel<List<ReviewModel>>();
+            try
+            {
+                var product = await _context.Products.Include(p => p.Reviews).FirstOrDefaultAsync(p => p.Id == ProductId);
+                if (product == null)
+                {
+                    response.Status = false;
+                    response.Message = "Produto não encontrado.";
+                    return response;
+                }
+
+                var userHasReviewed = product.Reviews.Any(r => r.UserId == userId);
+                if (!userHasReviewed)
+                {
+                    response.Status = false;
+                    response.Message = "Usuário nunca fez uma avaliação para este produto.";
+                    return response;
+                }
+                var review = product.Reviews.FirstOrDefault(r => r.UserId == userId && r.ProductId == ProductId);
+                if (review == null)
+                {
+                    response.Status = false;
+                    response.Message = "Avaliação não encontrada.";
+                    return response;
+                }
+                _context.Reviews.Remove(review);
+                await _context.SaveChangesAsync();
+                var reviews = (await _context.Reviews.ToListAsync())
+                    .Where(r => r.ProductId == review.ProductId)
+                    .OrderByDescending(r => r.CreatedAt)
+                    .ToList();
+                response.Data = reviews;
+                response.Message = "Avaliação removida com sucesso.";
+                return response;
+            }
+            catch (Exception e)
+            {
+                response.Message = "Erro ao remover a avaliação: " + e.Message;
+                response.Status = false;
+                return response;
+            }
+        }
 
     public async Task<ResponseModel<List<ProductModel>>> GetAllProductsAsync()
     {
@@ -197,4 +266,5 @@ public class ProductService : IProductService
             return response;
         }
     }
+
 }

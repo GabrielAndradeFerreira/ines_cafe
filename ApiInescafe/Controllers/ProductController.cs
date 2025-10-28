@@ -1,4 +1,6 @@
+using System.Security.Claims;
 using ApiInescafe.DTOs.Product;
+using ApiInescafe.DTOs.Review;
 using ApiInescafe.Models;
 using ApiInescafe.Services.Product;
 using Microsoft.AspNetCore.Authorization;
@@ -61,6 +63,28 @@ public class ProductController : ControllerBase
         return BadRequest(result);
     }
 
+    [HttpPost("CreateReview")]
+    public async Task<ActionResult<ResponseModel<ProductModel>>> CreateReview([FromBody] CreateReviewDto reviewDto)
+    {
+        var userIdString = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        if (string.IsNullOrEmpty(userIdString))
+        {
+            return Unauthorized(new ResponseModel<ProductModel> { Status = false, Message = "Usuário não autenticado." });
+        }
+
+        if (!int.TryParse(userIdString, out int userId))
+        {
+            return BadRequest(new ResponseModel<ProductModel> { Status = false, Message = "Formato do ID de usuário no token é inválido." });
+        }
+
+        var result = await _productService.CreateReviewAsync(reviewDto, userId);
+        if (result.Status)
+        {
+            return Ok(result);
+        }
+        return BadRequest(result);
+    }
+
     [HttpPatch("UpdateProduct")]
     public async Task<ActionResult<ResponseModel<List<ProductModel>>>> UpdateProduct([FromBody] ProductEditDto product)
     {
@@ -77,6 +101,28 @@ public class ProductController : ControllerBase
     {
         var result = await _productService.DeleteProductAsync(id);
         if (result.Status == true)
+        {
+            return Ok(result);
+        }
+        return BadRequest(result);
+    }
+
+    [HttpDelete("DeleteReview/{productId}")]
+    public async Task<ActionResult<ResponseModel<List<ReviewModel>>>> DeleteReview(int productId)
+    {
+        var userIdString = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        if (string.IsNullOrEmpty(userIdString))
+        {
+            return Unauthorized(new ResponseModel<List<ReviewModel>> { Status = false, Message = "Usuário não autenticado." });
+        }
+
+        if (!int.TryParse(userIdString, out int userId))
+        {
+            return BadRequest(new ResponseModel<List<ReviewModel>> { Status = false, Message = "Formato do ID de usuário no token é inválido." });
+        }
+
+        var result = await _productService.DeleteReviewAsync(productId, userId);
+        if (result.Status)
         {
             return Ok(result);
         }

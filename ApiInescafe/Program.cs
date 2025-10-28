@@ -8,13 +8,16 @@ using Microsoft.OpenApi.Models;
 using ApiInescafe.Services.Interfaces;
 using ApiInescafe.Services;
 using ApiInescafe.Services.Blog;
+using ApiInescafe.Services.Email;
+using ApiInescafe.Services.Course;
+using ApiInescafe.Services.SignaturePlan;
 
 var builder = WebApplication.CreateBuilder(args);
 var config = builder.Configuration;
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-
+builder.Services.AddTransient<IEmailService, SendGridEmailService>();
 
 builder.Services.AddSwaggerGen(options =>
 {
@@ -46,7 +49,8 @@ builder.Services.AddSwaggerGen(options =>
 
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IBlogService, BlogService>();
-
+builder.Services.AddScoped<ICourseService, CourseService>();
+builder.Services.AddScoped<ISignaturePlanService, SignaturePlanService>();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(config.GetConnectionString("DefaultConnection"))

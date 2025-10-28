@@ -10,6 +10,7 @@ public class CourseModel
     public string Description { get; set; } = string.Empty;
     [Column(TypeName = "decimal(18,2)")]
     public decimal Price { get; set; }
+    public string ImageUrl { get; set; } = string.Empty;
     [JsonIgnore]
     public ICollection<CourseClassModel> Classes { get; set; } = new List<CourseClassModel>();
     [JsonIgnore]
