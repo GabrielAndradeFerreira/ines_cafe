@@ -1,0 +1,104 @@
+      
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: transparent;
+            /*background-color: #FCDD97;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            background-image: ('../img/img/tela_cadastro_newsletter/imagem_de_fazenda.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;*/
+        }
+        
+        .container {
+            display: flex;
+            width: 35%;
+            min-width: 40%;
+            max-width: 90%;
+            height: 35%;
+            min-height: 600px;
+            max-height: 850px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin: 0 auto;
+            margin-top: 8%;
+            /*backdrop-filter: blur(10px); /* Efeito de vidro fosco */
+            /*-webkit-backdrop-filter: blur(10px); /* Para compatibilidade */
+        }
+        
+        .logo {/*este estilo marca apenas o posicionamento do logo nesta página
+                para modificações de estilo consulte o arquivo "../css/tools/logotipo.css"*/
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .tagline {/*este estilo marca apenas o posicionamento da tagline nesta página
+                    para modificações de estilo consulte o arquivo "../css/tools/tagline.css"*/
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .btn{/*este estilo marca apenas a largurado botão nesta página
+            para modificações de estilo consulte o arquivo "../css/tools/btn_cadastrar-se.css"*/
+        width: 30%;
+        }
+
+        .form-section {
+            flex: 1;
+            /*padding: 50px;*/
+            /*background-color: #781D42;*/
+            padding-left: 90px;
+            padding-right: 90px;
+            padding-bottom: 90px;
+            padding-top: 70px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #5D4037;
+            font-weight: 500;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            /*border-color: #781D42;*/
+            border: 3px solid #781D42;
+            border-radius: 30px;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus {
+            border-color: #8D6E63;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(141, 110, 99, 0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .image-section {
+                height: 200px;
+            }
+            
+            .form-section {
+                padding: 30px;
+            }
+        }
