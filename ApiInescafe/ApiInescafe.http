@@ -1,0 +1,6 @@
+@ApiInescafe_HostAddress = http://localhost:5183
+
+GET {{ApiInescafe_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
