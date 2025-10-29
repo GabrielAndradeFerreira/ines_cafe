@@ -4,30 +4,32 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Catálogo - INESCAFÉ</title>
+    <title>Catálogo DE CURSOS - INESCAFÉ</title>
 
     <!-- Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
         rel="stylesheet">
-
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./css/menu.css" />
     <link rel="stylesheet" href="./css/cursoscatalogo.css">
+    <link rel="stylesheet" href="./css/footer.css">
 </head>
 
 <body>
-    <div class="header-container">
+    <div class="header-container">,.,,
         <img src="./img/INESCAFÉ (1).svg" alt="Logo INESCafé" class="logo" />
 
         <div class="header-nav-line">
             <nav>
                 <ul>
-                    <li><a href="./home.html">Home</a></li>
-                    <li><a href="#" class="ativo">Chef</a></li>
+                    <li><a href="./home.html" >Home</a></li>
+                    <li><a href="./chef.html">Chef</a></li>
                     <li><a href="#">Curiosidades</a></li>
-                    <li><a href="#">Catálogo</a></li>
-                    <li><a href="#">Cursos</a></li>
-                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="./catalogo.html">Catálogo</a></li>
+                    <li><a href="./cursoscatalogo.html" class="ativo">Cursos</a></li>
+                    <li><a href="./newsletter.html">Newsletter</a></li>
                     <li><a href="#">Mais</a></li>
                 </ul>
             </nav>
@@ -120,8 +122,55 @@
             <!-- cards no JS -->
         </section>
     </main>
+    <!-- Footer -->
     <footer>
-        <p>© 2025 Inescafé - Todos os direitos reservados.</p>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Sobre Nós</h3>
+                <p>La Cucina Italiana é o seu guia definitivo para</p>
+                <p>a autêntica culinária italiana. Compartilhamos</p>
+                <p>receitas tradicionais, técnicas e histórias da Itália.</p>
+                <div class="social-icons">
+                    <a href="https://web.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.pinterest.com"><i class="fab fa-pinterest"></i></a>
+                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Links Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="html/receitas.html">Receitas</a></li>
+                    <li><a href="https://www.youtube.com/">Vídeos</a></li>
+                    <li><a href="#">Dicas de Chefs</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Categorias</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Massas</a></li>
+                    <li><a href="#">Pizzas</a></li>
+                    <li><a href="#">Risotos</a></li>
+                    <li><a href="#">Sobremesas</a></li>
+                    <li><a href="#">Pães</a></li>
+                    <li><a href="#">Vinhos</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Inscreva-se para receber nossas melhores receitas e dicas exclusivas!</p>
+                <div class="newsletter">
+                    <input type="email" placeholder="Seu e-mail">
+                    <button>Inscrever-se</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; © 2025 Inescafé - Todos os direitos reservados.</p>
+        </div>
     </footer>
 
     <script src="./script.js"></script>
