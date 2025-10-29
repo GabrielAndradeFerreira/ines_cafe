@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INESCAFÉ - CHEF</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/footer.css"/>
+    <link rel="stylesheet" href="../css/page/tela_compras.css"/>
+    <link rel="stylesheet" href="../css/tools/container_universal.css"/>
+
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img src="../img/INESCAFÉ (1).svg" alt="Logo INESCafé" class="logo" />
+
+            <div class="header-nav-line">
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Chef</a></li>
+                        <li><a href="#">Curiosidades</a></li>
+                        <li><a href="#">Catálogo</a></li>
+                        <li><a href="#">Cursos</a></li>
+                        <li><a href="#" class="ativo">Newsletter</a></li>
+                        <li><a href="#">Mais</a></li>
+                    </ul>
+                </nav>
+
+                <div class="acessibilidade" aria-label="Ferramentas de acessibilidade">
+                    <ul class="teste">
+                        <li>
+                            <img class="imgacss" src="../img/acessibilidade.png" alt="Acessibilidade">
+                            <ul class="dropdown">
+                                <li><img id="alternar-contraste" class="icone" src="../img/ico-altocontraste.png"
+                                        alt="Contraste"></li>
+                                <li><img id="aumentar-texto" class="icone" src="../img/ico-amais.png"
+                                        alt="Aumentar texto"></li>
+                                <li><img id="diminuir-texto" class="icone" src="../img/ico-amenos.png"
+                                        alt="Diminuir texto"></li>
+                                <li><img id="libras" class="icone" src="../img/ico-libras.png" alt="Libras"></li>
+                                <li><img id="preto-e-branco" class="icone" src="../img/ico-pretobranco.png"
+                                        alt="Preto e branco"></li>
+                                <li><img id="comando-de-voz" class="icone" src="../img/ico-voz.png" alt="Comando de voz">
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <!--<button class="darkmode" id="toggleTema" title="Alternar tema"><img src="./img/lua-crescente.png" alt=""></button> -->
+                    <!--<button class="alertamode" id="alerta" title="Ajuda de acessibilidade"><img src="./img/alerta.png" alt=""></button> -->
+                    <img class="modes" id="toggleTema" src="../img/lua-crescente.png" alt="">
+                    <img class="modes" id="alerta" src="../img/alerta.png">
+                    <img class="modes" id="shop" src="../img/shopping-bag.png">
+                </div>
+            </div>
+        </div>
+    </header>
+
+<main>
+    <div class="main-content">
+        <hr class="divider">    
+        <div class="divisao_containers">
+            <div class="text_titulo_pagina">
+            <h1>☕ Prensa Francesa INESCAFÉ Elegance</h1>
+        </div>
+            <img src="../img/img/tela_compras/imagem_cafeteira_francesa.png" alt="Prensa Francesa INESCAFÉ Elegance" class="imagem_produto">   
+    </div>
+    <div class="main-content">
+        <hr class="divider">    
+        <div class="divisao_container_informacoes">
+            <div >
+                <h2>Informações Pessoais</h2>
+                <form class="informacoes_pessoais">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo" class="placeholder">
+
+                    <label for="cpf">CPF</label>
+                    <input type="text" id="cpf" name="cpf" required placeholder="Digite seu CPF" class="placeholder">
+
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required placeholder="exemplo@email.com" class="placeholder">
+
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" required placeholder="(99) 99999-9999" class="placeholder">
+
+                    <label for="nascimento">Data de nascimento</label>
+                    <input type="date" id="nascimento" name="nascimento" required placeholder="dd/mm/aaaa" class="placeholder">
+
+                    <!-- Corrigido para radio buttons -->
+                    <label>Sexo</label>
+                    <input type="radio" id="masculino" name="sexo" value="masculino">
+                    <label for="masculino">Masculino</label>
+                    <input type="radio" id="feminino" name="sexo" value="feminino">
+                    <label for="feminino">Feminino</label>
+                    <input type="radio" id="naoInformado" name="sexo" value="naoInformado">
+                    <label for="naoInformado">Não informar</label>
+
+                    <button type="submit">Salvar Informações</button>
+                </form>
+            </div>
+            <div >
+                <h2>Endereço de Entrega</h2>
+                <form class="informacoes_endereco">
+                    <label for="cep">CEP</label>
+                    <input type="text" id="cep" name="cep" required class="placeholder" placeholder="Digite seu CEP">
+
+                    <label for="rua">Rua</label>
+                    <input type="text" id="rua" name="rua" required class="placeholder" placeholder="Digite o nome da rua">
+
+                    <label for="numero">Número</label>
+                    <input type="text" id="numero" name="numero" required class="placeholder" placeholder="Número da residência">
+
+                    <label for="complemento">Complemento</label>
+                    <input type="text" id="complemento" name="complemento" class="placeholder" placeholder="Apartamento, bloco, etc. (opcional)">
+
+                    <button type="submit">Salvar Endereço</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    
+</main>
+        
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Sobre Nós</h3>
+                <p>La Cucina Italiana é o seu guia definitivo para</p>
+                <p>a autêntica culinária italiana. Compartilhamos</p>
+                <p>receitas tradicionais, técnicas e histórias da Itália.</p>
+                <div class="social-icons">
+                    <a href="https://web.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.pinterest.com"><i class="fab fa-pinterest"></i></a>
+                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Links Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="html/receitas.html">Receitas</a></li>
+                    <li><a href="https://www.youtube.com/">Vídeos</a></li>
+                    <li><a href="#">Dicas de Chefs</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Categorias</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Massas</a></li>
+                    <li><a href="#">Pizzas</a></li>
+                    <li><a href="#">Risotos</a></li>
+                    <li><a href="#">Sobremesas</a></li>
+                    <li><a href="#">Pães</a></li>
+                    <li><a href="#">Vinhos</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Inscreva-se para receber nossas melhores receitas e dicas exclusivas!</p>
+                <div class="newsletter">
+                    <input type="email" placeholder="Seu e-mail">
+                    <button>Inscrever-se</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; © 2025 Inescafé - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>
