@@ -34,78 +34,183 @@ ul {
     list-style: none;
 }
 
-h2 {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 26px;
-    font-weight: 800;
-    margin-bottom: 1rem;
-    padding: 1% 1% 3% 1%;
-}
 /* Conteúdo principal do site */
 main {
     display: flex;
     flex-direction: column;
     gap: 4rem;
-    padding: 1% 15%;    
-}
-.text_titulo_pagina{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 36px;
-    font-weight: bolder;
-    text-align: center;
-    margin-top: 3%;
-    margin-bottom: 3%;
-}
-.imagem_produto{
-    padding: 1% 1% 1% 1%;
+    padding: 1% 15%;
 }
 
 .divisao_containers {
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-items: center;
-    justify-content: center;
 }
-.produto-info-box {
+
+.text_titulo_pagina {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 36px;
+    font-weight: bolder;
+    padding: 3% 15%;
+}
+
+.imagem_produto {
+    margin-bottom: 3%;
+}
+
+/* Container principal responsivo */
+.divisao_container_informacoes {
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    margin-bottom: 3%;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Formulário completo */
+.formulario-completo {
+    width: 100%;
+}
+
+.form-columns {
+    display: flex;
+    gap: 5%;
+    margin-bottom: 3%;
+    flex-wrap: wrap;
+}
+
+.form-col {
+    flex: 1 1 45%;
+    min-width: 300px;
+}
+
+/* Cada formulário ocupa 45% em desktop */
+.divisao_container_informacoes > div {
+    flex: 1 1 45%;
+    min-width: 300px;
+}
+
+.informacoes_pessoais {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    margin-bottom: 2rem;
+    gap: 5px;
 }
-.produto-detalhes {
+
+.informacoes_endereco {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.placeholder {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 25px;
-    font-weight:600;
+    font-size: 20px;
 }
-.preco-produto {
-    color: #198754;
+
+label {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 22px;
     font-weight: bold;
-    font-size: 3.5rem;
 }
-.pagamento-box {
-    margin-bottom: 2rem;
-}
-.tabela-pagamento {
+
+/* Personalização geral dos inputs de texto */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select {
+    border: 2px solid #8D2A4B;
+    border-radius: 30px;
+    padding: 10px 14px;
+    font-size: 18px;
+    background-color: #fff;
+    color: gray;
+    outline: none;
+    transition: border-color 0.3s;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
     width: 100%;
-    border-collapse: collapse;
-    font-size: x-large;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-.tabela-pagamento th, .tabela-pagamento td {
-    border: 1px solid #ccc;
-    padding: 0.7rem;
-    text-align: left;
-    font-size: 2.0rem;
+
+/* Efeito ao focar */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+select:focus {
+    border-color: #5C1D30;
+    background-color: #fff;
 }
-.finalizar-compra {
-    text-align: right;
-    margin-top: 1.5rem;
+
+/* Personalização do placeholder */
+input::placeholder {
+    color: #b08a99;
+    opacity: 1;
+    font-style: italic;
 }
-.metodo-pagamento.selected {
-    background-color: #198754;
-    color: #fff;
-    border-color: #198754;
+
+/* Estilos para radio buttons */
+.grupo-sexo {
+    margin-bottom: 15px;
 }
+
+.radio-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
+    flex-wrap: wrap;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 5px;
+    width: auto;
+}
+
+.radio-group label {
+    font-size: 16px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/* Botão de cadastro */
+.botao-cadastro-container {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #8D2A4B;
+    width: 100%;
+}
+
+.botao-cadastrar {
+    background: linear-gradient(135deg, #8D2A4B, #5C1D30);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(141, 42, 75, 0.3);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.botao-cadastrar:hover {
+    background: linear-gradient(135deg, #5C1D30, #8D2A4B);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(141, 42, 75, 0.4);
+}
+
+.botao-cadastrar:active {
+    transform: translateY(0);
+}
+
 /* ====================================================================== */
 /* MEDIA QUERIES PARA RESPONSIVIDADE */
 /* ====================================================================== */

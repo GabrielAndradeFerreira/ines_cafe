@@ -28,13 +28,22 @@
             <div class="header-nav-line">
                 <nav>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Chef</a></li>
-                        <li><a href="#">Curiosidades</a></li>
-                        <li><a href="#">Catálogo</a></li>
-                        <li><a href="#">Cursos</a></li>
-                        <li><a href="#" class="ativo">Newsletter</a></li>
-                        <li><a href="#">Mais</a></li>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="chef.html">Chef</a></li>
+                        <li><a href="./curiosidades.html">Curiosidades</a></li>
+                        <li><a href="catalogo.html">Catálogo</a></li>
+                        <li><a href="cursoscatalogo.html">Cursos</a></li>
+                        <li><a href="newsletter.html">Newsletter</a></li>
+
+                        <!-- Dropdown correto -->
+                        <li>
+                            <a class="maisBtn">Mais</a>
+                            <ul class="dropdown_menu">
+                                <li><a href="../html/tela_assinaturas.html">Planos de fidelidade</a></li>
+                                <li><a href="./curiosidades.html">Curiosidades</a></li>
+                                <li><a href="./faleconosco.html">Fale Conosco</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
 
@@ -70,68 +79,53 @@
 
 <main>
     <div class="main-content">
-        <hr class="divider">    
+        <hr class="divider">
         <div class="divisao_containers">
             <div class="text_titulo_pagina">
-            <h1>☕ Prensa Francesa INESCAFÉ Elegance</h1>
-        </div>
-            <img src="../img/img/tela_compras/imagem_cafeteira_francesa.png" alt="Prensa Francesa INESCAFÉ Elegance" class="imagem_produto">   
-    </div>
-    <div class="main-content">
-        <hr class="divider">    
-        <div class="divisao_container_informacoes">
-            <div >
-                <h2>Informações Pessoais</h2>
-                <form class="informacoes_pessoais">
-                    <label for="nome">Nome Completo</label>
-                    <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo" class="placeholder">
-
-                    <label for="cpf">CPF</label>
-                    <input type="text" id="cpf" name="cpf" required placeholder="Digite seu CPF" class="placeholder">
-
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" required placeholder="exemplo@email.com" class="placeholder">
-
-                    <label for="telefone">Telefone</label>
-                    <input type="tel" id="telefone" name="telefone" required placeholder="(99) 99999-9999" class="placeholder">
-
-                    <label for="nascimento">Data de nascimento</label>
-                    <input type="date" id="nascimento" name="nascimento" required placeholder="dd/mm/aaaa" class="placeholder">
-
-                    <!-- Corrigido para radio buttons -->
-                    <label>Sexo</label>
-                    <input type="radio" id="masculino" name="sexo" value="masculino">
-                    <label for="masculino">Masculino</label>
-                    <input type="radio" id="feminino" name="sexo" value="feminino">
-                    <label for="feminino">Feminino</label>
-                    <input type="radio" id="naoInformado" name="sexo" value="naoInformado">
-                    <label for="naoInformado">Não informar</label>
-
-                    <button type="submit">Salvar Informações</button>
-                </form>
+                <h1>☕ Prensa Francesa INESCAFÉ Elegance</h1>
             </div>
-            <div >
-                <h2>Endereço de Entrega</h2>
-                <form class="informacoes_endereco">
-                    <label for="cep">CEP</label>
-                    <input type="text" id="cep" name="cep" required class="placeholder" placeholder="Digite seu CEP">
-
-                    <label for="rua">Rua</label>
-                    <input type="text" id="rua" name="rua" required class="placeholder" placeholder="Digite o nome da rua">
-
-                    <label for="numero">Número</label>
-                    <input type="text" id="numero" name="numero" required class="placeholder" placeholder="Número da residência">
-
-                    <label for="complemento">Complemento</label>
-                    <input type="text" id="complemento" name="complemento" class="placeholder" placeholder="Apartamento, bloco, etc. (opcional)">
-
-                    <button type="submit">Salvar Endereço</button>
-                </form>
-
+            <div class="produto-info-box">
+                <img src="../img/img/tela_compras/imagem_cafeteira_francesa.png" alt="Prensa Francesa INESCAFÉ Elegance" class="imagem_produto">
+                <div class="produto-detalhes">
+                    <p><strong>Nome:</strong> Prensa Francesa INESCAFÉ Elegance</p>
+                    <p><strong>Descrição:</strong> Prensa francesa de alta qualidade para cafés especiais.</p>
+                    <p><strong>Capacidade:</strong> 600ml</p>
+                    <p><strong>Preço:</strong> <span class="preco-produto">R$ 189,90</span></p>
+                </div>
+            </div>
+            <div class="pagamento-box">
+                <h2>Métodos de Pagamento</h2>
+                <table class="tabela-pagamento">
+                    <thead>
+                        <tr>
+                            <th>Método</th>
+                            <th>Parcelamento</th>
+                            <th>Taxa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <button type="button" class="btn btn-outline-primary btn-sm metodo-pagamento" style="font-size: 3.0rem;">Pix</button>
+                            </td>
+                            <td>À vista</td>
+                            <td>Sem juros</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="finalizar-compra">
+                <button class="btn btn-success btn-lg" 
+                style="background-color: #781D42; 
+                border-radius: 30px; 
+                margin-bottom: 5%;
+                font-size: xx-large;
+                font-weight: 400;
+                width: 400px;
+                ">Finalizar Compra</button>
             </div>
         </div>
     </div>
-    
 </main>
         
     <!-- Footer -->
@@ -186,6 +180,8 @@
     </footer>
 
     <script src="../script.js"></script>
+    <script src="../js/tools/funcoes_da_tela_de_compras.js"></script>
+   
 </body>
 
 </html>
