@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INESCAFÉ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/footer.css">
+
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img src="./img/INESCAFÉ (1).svg" alt="Logo INESCafé" class="logo" />
+
+            <div class="header-nav-line">
+                <nav>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="chef.html" class="ativo">Chef</a></li>
+                        <li><a href="./curiosidades.html">Curiosidades</a></li>
+                        <li><a href="catalogo.html">Catálogo</a></li>
+                        <li><a href="cursoscatalogo.html">Cursos</a></li>
+                        <li><a href="newsletter.html">Newsletter</a></li>
+
+                        <!-- Dropdown correto -->
+                        <li>
+                            <a class="maisBtn">Mais</a>
+                            <ul class="dropdown_menu">
+                                <li><a href="#">Planos de fidelidade</a></li>
+                                <li><a href="./curiosidades.html">Curiosidades</a></li>
+                                <li><a href="./faleconosco.html">Fale Conosco</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="acessibilidade" aria-label="Ferramentas de acessibilidade">
+                    <ul class="teste">
+                        <li>
+                            <button class="menu"><i class="fa-solid fa-universal-access"></i></button>
+                            <ul class="dropdown">
+                                <li><img class="modes" id="toggleTema" src="./img/lua-crescente.png" alt=""></li>
+                                <li><img class="modes" id="alerta" src="./img/alerta.png"></li>
+                                <li><img id="alternar-contraste" class="icone" src="./img/ico-altocontraste.png"
+                                        alt="Contraste"></li>
+                                <li><img id="aumentar-texto" class="icone" src="./img/ico-amais.png"
+                                        alt="Aumentar texto"></li>
+                                <li><img id="diminuir-texto" class="icone" src="./img/ico-amenos.png"
+                                        alt="Diminuir texto"></li>
+                                <li><img id="libras" class="icone" src="./img/ico-libras.png" alt="Libras"></li>
+                                <li><img id="preto-e-branco" class="icone" src="./img/ico-pretobranco.png"
+                                        alt="Preto e branco"></li>
+                                <li><img id="comando-de-voz" class="icone" src="./img/ico-voz.png" alt="Comando de voz">
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <button class="menu"><i class="fa-solid fa-bag-shopping"></i></button>
+                    <button class="menu"><i class="fas fa-user"></i></button>
+
+                    <!--<button class="darkmode" id="toggleTema" title="Alternar tema"><img src="./img/lua-crescente.png" alt=""></button> -->
+                    <!--<button class="alertamode" id="alerta" title="Ajuda de acessibilidade"><img src="./img/alerta.png" alt=""></button> -->
+                    <!--<img class="modes" id="toggleTema" src="./img/lua-crescente.png" alt="">-->
+                    <!--<img class="modes" id="alerta" src="./img/alerta.png">-->
+                    <!--<img class="modes" id="shop" src="./img/shopping-bag.png">-->
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-img">
+                <img src="./img/fotohome.svg" alt="Cafeteria artesanal">
+            </div>
+
+            <div class="hero-texto">
+                <h1>ESPECIALIZADA<br>EM CAFÉS ARTESANAIS</h1>
+                <p>Onde a tradição encontra a inovação.</p>
+            </div>
+        </section>
+
+
+        <section class="cards-info">
+            <div class="card">
+                <img src="./img/bolsa.svg" alt="Bolsa">
+                <p>O melhor,<br>que cabe no bolso</p>
+            </div>
+
+            <div class="card">
+                <img src="./img/cafe.svg" alt="Café">
+                <p>qualidade<br>em cada detalhe.</p>
+            </div>
+
+            <div class="card">
+                <img src="./img/chat.svg" alt="Profissionais">
+                <p>aulas com<br>os melhores profissionais</p>
+            </div>
+        </section>
+
+
+        <section class="essential-section container">
+            <div class="essential-header">
+                <h3>O ESSENCIAL EM <span>CADA XÍCARA</span></h3>
+                <p class="header-texto-intro">Tudo começou com um gole. Um gole de café bem tirado, encorpado, com aroma intenso e final marcante. Foi ali que Pedro Lima — barista por vocação e empreendedor por paixão — descobriu que o café podia ser muito mais do que uma bebida: podia ser uma experiência.</p>
+            </div>
+
+        <section id="image-carousel" class="splide" aria-label="Beautiful Images">
+            <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <img src="./img/Group 22.svg" alt="">
+                        </li>
+
+                        <li class="splide__slide">
+                            <img src="./img/Group 23.svg" alt="">
+                        </li>
+
+                        <li class="splide__slide">
+                            <img src="./img/Group 24.svg" alt="">
+                        </li>
+
+                        <li class="splide__slide">
+                            <img src="./img/Group 25.svg" alt="">
+                        </li>
+                    </ul>
+            </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+  <div class="container contact-content">
+    <div class="contact-left">
+      <div class="contact-text">
+        <h2>VAMOS TOMAR UM </h2> 
+        <h2 class="primary">CAFÉ E CONVERSAR</h2>
+        <p>Está com alguma dúvida? Saiba que estamos sempre à disposição para te atender!</p>
+      </div>
+
+      <div class="visit-section">
+        <h2>VENHA NOS VISITAR</h2>
+        <div class="schedule">
+          <p class="title">DINNER & DELIVERY</p>
+          <p>Monday to SATURDAY from 7pm to 12pm</p>
+          <p class="title">LUNCH & DELIVERY</p>
+          <p>Saturday from 1pm to 5pm</p>
+        </div>
+      </div>
+    </div>
+
+    <form class="contact-form">
+      <div class="caixa">
+        <label for="nome">Nome: </label>
+        <input type="text" placeholder="Seu nome completo" aria-label="Nome">
+      </div>
+      <div class="caixa">
+        <label for="email">Email:</label>
+        <input type="email" placeholder="Email" aria-label="Email">
+      </div>
+      <div class="caixa">
+        <label for="mensagem">Digite sua dúvida: </label>
+        <textarea placeholder="Mensagem" aria-label="Mensagem"></textarea>
+      </div>
+      <button type="submit">ENVIAR MENSAGEM</button>
+    </form>
+  </div>
+</section>
+
+
+
+
+        <section class="gallery-section">
+            <div class="container gallery-content">
+                <p class="gallery-text">Autêntico.<br>Aromático.<br>Inesquecível.</p>
+                <div class="gallery-grid">
+                    <div class="grid-item"><img src="./img/imggrid1.png"></div>
+                    <div class="grid-item"><img src="./img/imggrid2.png"></div>
+                    <div class="grid-item"><img src="./img/imggrid3.png"></div>
+                    <div class="grid-item"><img src="./img/imggrid4.png"></div>
+                    <div class="grid-item"><img src="./img/imggrid5.png"></div>
+                    <div class="grid-item"><img src="./img/imggrid6.png"></div>
+                    <div class="grid-item"><img src="./img/imggrid7.png"></div>
+                    <div class="grid-item"><img src="./img/imggrid8.png"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Sobre Nós</h3>
+                <p>La Cucina Italiana é o seu guia definitivo para</p>
+                <p>a autêntica culinária italiana. Compartilhamos</p>
+                <p>receitas tradicionais, técnicas e histórias da Itália.</p>
+                <div class="social-icons">
+                    <a href="https://web.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.pinterest.com"><i class="fab fa-pinterest"></i></a>
+                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Links Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="html/receitas.html">Receitas</a></li>
+                    <li><a href="https://www.youtube.com/">Vídeos</a></li>
+                    <li><a href="#">Dicas de Chefs</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Categorias</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Massas</a></li>
+                    <li><a href="#">Pizzas</a></li>
+                    <li><a href="#">Risotos</a></li>
+                    <li><a href="#">Sobremesas</a></li>
+                    <li><a href="#">Pães</a></li>
+                    <li><a href="#">Vinhos</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Inscreva-se para receber nossas melhores receitas e dicas exclusivas!</p>
+                <div class="newsletter">
+                    <input type="email" placeholder="Seu e-mail">
+                    <button>Inscrever-se</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; © 2025 Inescafé - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+
+    <script src="./script/script.js"></script>
+</body>
+
+</html>

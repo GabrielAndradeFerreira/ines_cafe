@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Catálogo - INESCAFÉ</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="./css/menu.css">
+  <link rel="stylesheet" href="./css/catalogo.css"/>
+  <link rel="stylesheet" href="./css/footer.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <header>
+        <div class="header-container">
+            <img src="./img/INESCAFÉ (1).svg" alt="Logo INESCafé" class="logo" />
+
+            <div class="header-nav-line">
+                <nav>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="chef.html" class="ativo">Chef</a></li>
+                        <li><a href="./curiosidades.html">Curiosidades</a></li>
+                        <li><a href="catalogo.html">Catálogo</a></li>
+                        <li><a href="cursoscatalogo.html">Cursos</a></li>
+                        <li><a href="newsletter.html">Newsletter</a></li>
+
+                        <!-- Dropdown correto -->
+                        <li>
+                            <a class="maisBtn">Mais</a>
+                            <ul class="dropdown_menu">
+                                <li><a href="#">Planos de fidelidade</a></li>
+                                <li><a href="./curiosidades.html">Curiosidades</a></li>
+                                <li><a href="./faleconosco.html">Fale Conosco</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="acessibilidade" aria-label="Ferramentas de acessibilidade">
+                    <ul class="teste">
+                        <li>
+                            <button class="menu"><i class="fa-solid fa-universal-access"></i></button>
+                            <ul class="dropdown">
+                                <li><img class="modes" id="toggleTema" src="./img/lua-crescente.png" alt=""></li>
+                                <li><img class="modes" id="alerta" src="./img/alerta.png"></li>
+                                <li><img id="alternar-contraste" class="icone" src="./img/ico-altocontraste.png"
+                                        alt="Contraste"></li>
+                                <li><img id="aumentar-texto" class="icone" src="./img/ico-amais.png"
+                                        alt="Aumentar texto"></li>
+                                <li><img id="diminuir-texto" class="icone" src="./img/ico-amenos.png"
+                                        alt="Diminuir texto"></li>
+                                <li><img id="libras" class="icone" src="./img/ico-libras.png" alt="Libras"></li>
+                                <li><img id="preto-e-branco" class="icone" src="./img/ico-pretobranco.png"
+                                        alt="Preto e branco"></li>
+                                <li><img id="comando-de-voz" class="icone" src="./img/ico-voz.png" alt="Comando de voz">
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <button class="menu"><i class="fa-solid fa-bag-shopping"></i></button>
+                    <button class="menu"><i class="fas fa-user"></i></button>
+
+                    <!--<button class="darkmode" id="toggleTema" title="Alternar tema"><img src="./img/lua-crescente.png" alt=""></button> -->
+                    <!--<button class="alertamode" id="alerta" title="Ajuda de acessibilidade"><img src="./img/alerta.png" alt=""></button> -->
+                    <!--<img class="modes" id="toggleTema" src="./img/lua-crescente.png" alt="">-->
+                    <!--<img class="modes" id="alerta" src="./img/alerta.png">-->
+                    <!--<img class="modes" id="shop" src="./img/shopping-bag.png">-->
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+  <main class="container">
+    <section class="controls">
+      <div class="controls-row">
+        <div class="control-group">
+          <label class="control-label">Ordenar por:</label>
+          <button id="sortBtn" class="pill secondary" data-direction="desc" aria-pressed="false">
+            Preço Maior ao menor
+            <span class="icon sort-icon" aria-hidden="true">
+              <!-- simple sort icon -->
+              <svg viewBox="0 0 24 24" width="1.2rem" height="1.2rem" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h13M3 12h9M3 18h5"/></svg>
+            </span>
+          </button>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label">Filtrar por:</label>
+          <div class="pill select-pill">
+            <select id="categorySelect" aria-label="Filtrar por categoria">
+              <option value="all">Categoria</option>
+              <!-- opções no js -->
+            </select>
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="1.2rem" height="1.2rem" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="view-toggle">
+          <button id="toggleView" class="icon-btn" title="Alternar visualização" aria-pressed="false">
+            <!-- grid icon -->
+            <svg id="gridIcon" viewBox="0 0 24 24" width="1.6rem" height="1.6rem" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8"/><rect x="13" y="3" width="8" height="8"/><rect x="3" y="13" width="8" height="8"/><rect x="13" y="13" width="8" height="8"/></svg>
+            <svg id="listIcon" style="display: none;" viewBox="0 0 24 24" width="1.6rem" height="1.6rem" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13"/><circle cx="3.5" cy="6" r="1.5"/><circle cx="3.5" cy="12" r="1.5"/><circle cx="3.5" cy="18" r="1.5"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="catalog" class="catalog grid-view" aria-live="polite">
+      <!-- product cards injected by JS -->
+    </section>
+  </main>
+
+
+  <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Sobre Nós</h3>
+                <p>La Cucina Italiana é o seu guia definitivo para</p>
+                <p>a autêntica culinária italiana. Compartilhamos</p>
+                <p>receitas tradicionais, técnicas e histórias da Itália.</p>
+                <div class="social-icons">
+                    <a href="https://web.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.pinterest.com"><i class="fab fa-pinterest"></i></a>
+                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Links Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="html/receitas.html">Receitas</a></li>
+                    <li><a href="https://www.youtube.com/">Vídeos</a></li>
+                    <li><a href="#">Dicas de Chefs</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Categorias</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Massas</a></li>
+                    <li><a href="#">Pizzas</a></li>
+                    <li><a href="#">Risotos</a></li>
+                    <li><a href="#">Sobremesas</a></li>
+                    <li><a href="#">Pães</a></li>
+                    <li><a href="#">Vinhos</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Inscreva-se para receber nossas melhores receitas e dicas exclusivas!</p>
+                <div class="newsletter">
+                    <input type="email" placeholder="Seu e-mail">
+                    <button>Inscrever-se</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; © 2025 Inescafé - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    
+  <script src="./script/script.js"></script>
+  <script src="./script/script_catalogo.js""></script>
+</body>
+</html>

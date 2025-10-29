@@ -1,0 +1,306 @@
+:root {
+  --vinho: #8D2A4B;
+  --bege: #FBF6F4;
+
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+h1 {
+    width: 90%;
+    font-weight: 900;
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1700px;
+  margin: 2% auto 6%;
+
+}
+
+
+.video-thumbnail-container {
+    position: relative; /* ESSENCIAL para o botão ficar centralizado */
+    width: 100%;
+}
+
+.video-thumbnail {
+    width: 100%;
+    height: 30%; /* Mantém a proporção da imagem */
+    display: block;
+    /* Opcional: Bordas arredondadas na parte de cima da imagem */
+    border-radius: 28px 28px 0 0;
+}
+
+.video-card {
+  background-color: white;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  padding: 10%;
+  border: solid #6e2139;
+
+    /* justify-items: normal; */
+    align-items: center;
+    /* justify-items: center; */
+    display: flex
+;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.video-card:hover {
+  transform: translateY(-5px);
+}
+
+.video-info {
+  padding: 1rem;
+}
+
+.video-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--vinho);
+}
+
+.aviso {
+    font-weight: bold;
+    background: #6e2139;
+    border-radius: 0px 100px 100px;
+    padding: 12px 28px;
+    text-align: center;
+    color: #fff;
+}
+
+
+
+
+/* Estilo BÁSICO para o Modal */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    z-index: 100; /* Garante que fique acima de todo o seu site */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); /* Fundo preto semi-transparente */
+}
+
+/* Conteúdo do Modal */
+.modal-content {
+    background-color: transparent; /* Fundo transparente */
+    margin: 10% auto; /* 10% do topo e centralizado */
+    padding: 0;
+    border: none;
+    width: 90%;
+    max-width: 800px; /* Largura máxima para vídeos em tela cheia */
+    position: relative;
+}
+
+/* Botão de Fechar */
+.close {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: -30px; /* Acima do iframe */
+    right: 0px; 
+    cursor: pointer;
+}
+
+/* Iframe (o player de vídeo) */
+#videoFrame {
+    width: 100%;
+    height: 450px; /* Ajuste a altura conforme a proporção (16:9) */
+    display: block;
+    border-radius: 10px;
+}
+
+
+/* ESTILOS DO BOTÃO DE PLAY (Como solicitado) */
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o botão */
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.6); /* Círculo preto semi-transparente */
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    z-index: 10; /* Garante que fique acima da imagem */
+    transition: background-color 0.3s ease;
+}
+
+.play-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Cria o ícone de triângulo branco (seta de play) */
+.play-button::after {
+    content: ''; 
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* Ajuste de centralização para o triângulo */
+    transform: translate(-40%, -50%); 
+    width: 0;
+    height: 0;
+    border-style: solid;
+    /* Cria o triângulo: altura | nada | altura | largura */
+    border-width: 10px 0 10px 18px; 
+    border-color: transparent transparent transparent white;
+}
+
+
+
+/* Página de detalhes */
+.detalhes-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.detalhes-header {
+  text-align: center;
+  color: var(--vinho);
+  padding: 1.5rem;
+}
+
+iframe {
+  width: 100%;
+  height: 450px;
+  border: none;
+}
+
+.detalhes-content {
+  padding: 1.5rem;
+}
+
+.detalhes-content p {
+  line-height: 1.6;
+  color: #444;
+}
+
+.voltar {
+  display: inline-block;
+  margin: 1rem 0 0 1.5rem;
+  padding: 0.6rem 1rem;
+  background: var(--vinho);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.voltar:hover {
+  background: #6e2139;
+}
+
+
+
+/* Container da seção */
+.catalogo2 {
+    padding: 2rem;
+    max-width: 1700px;
+    display: flex; 
+    justify-content: center; /* Centraliza o card principal */
+    margin: -2% auto 4%;
+}
+
+/* Card Principal (Card em Destaque) */
+.video-card2 {
+    display: flex; /* Layout horizontal (lado a lado) */
+    max-width: 1700px; 
+    width: 100%;
+    background-color: var(--bege); /* Fundo claro para a parte da imagem */
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Sombra que destaca */
+    transition: transform 0.3s ease;
+}
+
+.video-card2:hover {
+    transform: scale(1.01); /* Efeito sutil ao passar o mouse */
+}
+
+
+/* Container da Imagem (40% da Largura) */
+.video-thumbnail-container2 {
+    position: relative;
+    flex: 0 0 40%; /* Ocupa 40% da largura do card */
+    min-width: 300px; 
+    overflow: hidden; /* Garante que a imagem não "escape" das bordas */
+}
+
+.video-thumbnail2 {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    display: block;
+    /* Borda arredondada no canto esquerdo */
+    border-radius: 30px 0 0 30px; 
+}
+
+
+/* Área de Informação (60% da Largura) */
+.video-info2 {
+    flex: 1; /* Ocupa o restante do espaço */
+    background-color: var(--vinho); /* Fundo Vinho para alto contraste e destaque */
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza o texto verticalmente */
+    color: var(--bege); /* Cor do texto padrão para este bloco */
+    /* Borda arredondada no canto direito */
+    border-radius: 0 30px 30px 0; 
+}
+
+.video-info2 h2 {
+    color: var(--bege); /* Título em Bege */
+    font-size: 2.2rem;
+    margin-top: 0;
+    font-weight: 800;
+}
+
+.video-info2 p {
+    color: var(--bege); /* Texto em Bege */
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: larger;
+}
+
+/* Estilo do Aviso dentro do Card Destaque */
+.video-info2 .aviso {
+    background-color: var(--bege); /* Fundo Bege para contraste */
+    color: var(--vinho); /* Texto Vinho */
+    font-weight: 700;
+    border-radius: 100px;
+    padding: 10px 20px;
+    max-width: 350px;
+    margin-top: 1rem;
+    align-self: flex-start; /* Alinha o aviso à esquerda */
+}
