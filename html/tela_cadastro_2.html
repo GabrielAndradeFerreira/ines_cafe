@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../css/page/tela_cadastro.css">
+    <link rel="stylesheet" href="../css/tools/btn_cadastrar-se.css">
+    <link rel="stylesheet" href="../css/tools/reset_da_pagina.css">
+    <link rel="stylesheet" href="../css/tools/imagem_de_background.css">
+    <!--<link rel="stylesheet" href="../css/tools/container_transparente.css">-->
+    <link rel="stylesheet" href="../css/tools/logotipo.css">
+    <link rel="stylesheet" href="../css/tools/check_box.css">
+    <link rel="stylesheet" href="../css/tools/container_para_cadastros.css">
+    <link rel="stylesheet" href="../css/tools/login_link.css">
+    <link rel="stylesheet" href="../css/tools/reset_da_pagina.css">
+    <link rel="stylesheet" href="../css/tools/tagline.css">
+
+    <!-- Importando o CSS do formulário completo -->
+    <link rel="stylesheet" href="../css/page/tela_cadastro_2.css">
+
+    <meta name="description" content="Cadastro completo - INESCAFÉ">
+    <meta name="author" content="Gabriel Ferreira">
+</head>
+<body>
+    <img src="../img/img/tela_cadastro_newsletter/background_imagem_de_fazenda.png" alt="Fazenda de café" class="background-image">    
+    <div class="container">        
+        <div class="form-section">
+            <div class="logo">INESCAFÉ</div>
+            <p class="tagline">Todo dia começa melhor com um bom café, receba um gole de inspiração.</p>
+            
+            <!-- Formulário completo da tela cadastro 2 -->
+            <form id="formulario-cadastro" class="formulario-completo">
+                <div class="form-columns">
+                    <!-- Coluna 1: Informações Pessoais -->
+                    <div class="form-col">
+                        <h3>Informações Pessoais</h3>
+                        
+                        <div class="form-group">
+                            <label for="nome">Nome Completo *</label>
+                            <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo" class="placeholder">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cpf">CPF *</label>
+                            <input type="text" id="cpf" name="cpf" required placeholder="Digite seu CPF" class="placeholder">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" name="email" required placeholder="exemplo@email.com" class="placeholder">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefone">Telefone *</label>
+                            <input type="tel" id="telefone" name="telefone" required placeholder="(99) 99999-9999" class="placeholder">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nascimento">Data de nascimento *</label>
+                            <input type="date" id="nascimento" name="nascimento" required class="placeholder">
+                        </div>
+
+                        <div class="form-group grupo-sexo">
+                            <label>Sexo *</label>
+                            <div class="radio-group">
+                                <input type="radio" id="masculino" name="sexo" value="masculino" required>
+                                <label for="masculino">Masculino</label>
+                                
+                                <input type="radio" id="feminino" name="sexo" value="feminino">
+                                <label for="feminino">Feminino</label>
+                                
+                                <input type="radio" id="naoInformado" name="sexo" value="naoInformado">
+                                <label for="naoInformado">Não informar</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coluna 2: Endereço -->
+                    <div class="form-col">
+                        <h3>Endereço de Entrega</h3>
+                        
+                        <div class="form-group">
+                            <label for="cep">CEP *</label>
+                            <input type="text" id="cep" name="cep" required class="placeholder" placeholder="Digite seu CEP">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="rua">Rua *</label>
+                            <input type="text" id="rua" name="rua" required class="placeholder" placeholder="Digite o nome da rua">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="numero">Número *</label>
+                            <input type="text" id="numero" name="numero" required class="placeholder" placeholder="Número da residência">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="complemento">Complemento</label>
+                            <input type="text" id="complemento" name="complemento" class="placeholder" placeholder="Apartamento, bloco, etc. (opcional)">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bairro">Bairro *</label>
+                            <input type="text" id="bairro" name="bairro" required class="placeholder" placeholder="Digite seu bairro">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cidade">Cidade *</label>
+                            <input type="text" id="cidade" name="cidade" required class="placeholder" placeholder="Digite sua cidade">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="estado">Estado *</label>
+                            <select id="estado" name="estado" required class="placeholder">
+                                <option value="">Selecione seu estado</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Termos e condições -->
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">Concordo com os <a href="#">Termos de Uso</a> e <a href="#">Política de Privacidade</a></label>
+                </div>
+
+                <!-- Botão de Cadastro -->
+                <div class="botao-cadastro-container">
+                    <button type="submit" class="botao-cadastrar">
+                        <i class="fas fa-user-plus"></i>
+                        Cadastrar-se
+                    </button>
+                </div>
+            </form>
+            
+            <p class="login-link">Já tem uma conta? <a href="#">Faça login</a></p>
+        </div>
+    </div>
+
+
+<!-- Scripts -->
+<!--<script src="../js/tools/validacao_de_campos.js"></script>-->
+<script src="../js/tools/validacao_de_campos_tela_cadastro_2.js"></script>
+</body>
+</html>

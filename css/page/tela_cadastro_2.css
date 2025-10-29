@@ -1,0 +1,471 @@
+/* ==========================================================================
+   ESTILOS BASE E RESET
+   ========================================================================== */
+:root {
+    --primary-color: #8D2A4B; 
+    --secondary-color: #F8F8F8; 
+    --text-color: #333;
+    --light-text-color: #FFF;
+    --dark-bg-color: #5C1D30;
+    --header-height: 5rem;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #FCDD97;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ==========================================================================
+   ESTRUTURA PRINCIPAL DA PÁGINA
+   ========================================================================== */
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    min-height: 600px;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+}
+
+/* ==========================================================================
+   SEÇÃO DO FORMULÁRIO
+   ========================================================================== */
+.form-section {
+    flex: 0.6;
+    background-color: white;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    padding: 50px 60px 0px 60px;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #781D42;
+    font-family: "Instrument Serif", serif;
+}
+
+.tagline {
+    color: #781D42;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   FORMULÁRIO COMPLETO - ADAPTAÇÕES
+   ========================================================================== */
+.form-section .formulario-completo {
+    max-height: 65vh;
+    overflow-y: auto;
+    padding-right: 10px;
+    margin-bottom: 20px;
+}
+
+.form-section .formulario-completo::-webkit-scrollbar {
+    width: 6px;
+}
+
+.form-section .formulario-completo::-webkit-scrollbar-thumb {
+    background: #8D2A4B;
+    border-radius: 10px;
+}
+
+.form-section .formulario-completo::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+/* ==========================================================================
+   LAYOUT DO FORMULÁRIO EM COLUNAS
+   ========================================================================== */
+.form-columns {
+    display: flex;
+    gap: 25px;
+    width: 100%;
+}
+
+.form-col {
+    flex: 1 1 0;
+    min-width: 280px;
+    width: 100%;
+}
+
+.form-col h3 {
+    color: #781D42;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #8D2A4B;
+    padding-bottom: 8px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.formulario-completo {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+/* ==========================================================================
+   ESTILOS DOS GRUPOS DE FORMULÁRIO
+   ========================================================================== */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #5D4037;
+    font-weight: 500;
+    font-size: 1.4rem;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* ==========================================================================
+   ESTILOS DOS INPUTS
+   ========================================================================== */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="password"],
+select {
+    width: 500px;
+    padding: 12px 15px;
+    border: 3px solid #781D42;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    color: #333;
+    outline: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+input[type="password"]:focus,
+select:focus {
+    border-color: #5C1D30;
+    background-color: #fff;
+    box-shadow: 0 0 0 2px rgba(141, 110, 99, 0.2);
+}
+
+input::placeholder {
+    color: #b08a99;
+    opacity: 1;
+    font-style: italic;
+}
+
+.placeholder {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+}
+
+/* ==========================================================================
+   GRUPO DE RADIO BUTTONS
+   ========================================================================== */
+.grupo-sexo {
+    margin-bottom: 15px;
+}
+
+.grupo-sexo label {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
+    flex-wrap: wrap;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 5px;
+    width: auto;
+}
+
+.radio-group label {
+    font-size: 1.4rem;
+    font-weight: normal;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* ==========================================================================
+   CHECKBOX TERMOS E CONDIÇÕES
+   ========================================================================== */
+.checkbox-group {
+    margin: 25px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-top: 3px;
+    width: auto;
+}
+
+.checkbox-group label {
+    font-size: 1.3rem;
+    color: #5D4037;
+    line-height: 1.4;
+}
+
+.checkbox-group a {
+    color: #8D2A4B;
+    text-decoration: underline;
+}
+
+.checkbox-group a:hover {
+    color: #5C1D30;
+}
+
+/* ==========================================================================
+   BOTÃO DE CADASTRO
+   ========================================================================== */
+.botao-cadastro-container {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #8D2A4B;
+    width: 100%;
+}
+
+.botao-cadastrar {
+    background: linear-gradient(135deg, #8D2A4B, #5C1D30);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(141, 42, 75, 0.3);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Montserrat", sans-serif;
+    width: 25%;
+    justify-content: center;
+}
+
+.botao-cadastrar:hover {
+    background: linear-gradient(135deg, #5C1D30, #8D2A4B);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(141, 42, 75, 0.4);
+}
+
+.botao-cadastrar:active {
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   LINK DE LOGIN
+   ========================================================================== */
+.login-link {
+    text-align: center;
+    padding: 0px 60px 60px 60px;
+    font-size: 1.4rem;
+    color: #5D4037;
+}
+
+.login-link a {
+    color: #8D2A4B;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.login-link a:hover {
+    color: #5C1D30;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES - RESPONSIVIDADE
+   ========================================================================== */
+
+/* Tablets (768px a 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 90%;
+    }
+    
+    .form-section {
+        padding: 50px 60px 60px 60px;
+    }
+    
+    .form-columns {
+        gap: 20px;
+    }
+    
+    .form-col {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+/* Tablets Pequenos (768px) */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    .container {
+        flex-direction: column;
+        max-width: 100%;
+    }
+    
+    .image-section {
+        height: 200px;
+        min-height: 200px;
+    }
+    
+    .form-section {
+        padding: 40px 30px;
+        flex: none;
+    }
+    
+    .form-columns {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .form-col {
+        flex: 1 1 100%;
+    }
+    
+    .form-section .formulario-completo {
+        max-height: none;
+        overflow-y: visible;
+    }
+    
+    .logo {
+        font-size: 3rem;
+    }
+    
+    .tagline {
+        font-size: 1.6rem;
+    }
+}
+
+/* Mobile (480px) */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .form-section {
+        padding: 30px 20px;
+    }
+    
+    .logo {
+        font-size: 2.8rem;
+    }
+    
+    .tagline {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="password"],
+    select {
+        padding: 10px 12px;
+        font-size: 1.4rem;
+    }
+    
+    .botao-cadastrar {
+        padding: 12px 30px;
+        font-size: 1.4rem;
+    }
+    
+    .radio-group {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .checkbox-group label {
+        font-size: 1.2rem;
+    }
+    
+    .login-link {
+        font-size: 1.3rem;
+    }
+}
+
+/* Mobile Pequeno (360px) */
+@media (max-width: 360px) {
+    .form-section {
+        padding: 25px 15px;
+    }
+    
+    .logo {
+        font-size: 2.5rem;
+    }
+    
+    .tagline {
+        font-size: 1.3rem;
+    }
+    
+    .form-col h3 {
+        font-size: 1.6rem;
+    }
+}
