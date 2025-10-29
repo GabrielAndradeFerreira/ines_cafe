@@ -10,23 +10,23 @@ public class AppDbContext : DbContext
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
-{
-    base.OnModelCreating(modelBuilder);
+    {
+        base.OnModelCreating(modelBuilder);
 
-    modelBuilder.Entity<blogLikesModel>()
-        .HasOne(like => like.User)
-        .WithMany()
-        .HasForeignKey(like => like.UserId)
-        .OnDelete(DeleteBehavior.NoAction); 
+        modelBuilder.Entity<blogLikesModel>()
+            .HasOne(like => like.User)
+            .WithMany()
+            .HasForeignKey(like => like.UserId)
+            .OnDelete(DeleteBehavior.NoAction);
 
 
-    modelBuilder.Entity<blogLikesModel>()
-        .HasOne(like => like.Blog)
-        .WithMany(post => post.Likes)
-        .HasForeignKey(like => like.BlogId)
-        .OnDelete(DeleteBehavior.Cascade);
+        modelBuilder.Entity<blogLikesModel>()
+            .HasOne(like => like.Blog)
+            .WithMany(post => post.Likes)
+            .HasForeignKey(like => like.BlogId)
+            .OnDelete(DeleteBehavior.Cascade);
 
-}
+    }
 
     public DbSet<BlogModel> BlogPosts { get; set; } = null!;
     public DbSet<blogLikesModel> BlogLikes { get; set; } = null!;
@@ -38,4 +38,5 @@ public class AppDbContext : DbContext
     public DbSet<SignaturePlanModel> SignaturePlans { get; set; }
     public DbSet<SignaturePlanMembersModel> SignaturePlanMembers { get; set; } = null!;
     public DbSet<UserModel> Users { get; set; } = null!;
+    public DbSet<PedidoModel> Pedidos { get; set; } = null!;
 }

@@ -8,16 +8,23 @@ using Microsoft.OpenApi.Models;
 using ApiInescafe.Services.Interfaces;
 using ApiInescafe.Services;
 using ApiInescafe.Services.Blog;
-using ApiInescafe.Services.Email;
 using ApiInescafe.Services.Course;
 using ApiInescafe.Services.SignaturePlan;
+using ApiInescafe.Services.Pagamento;
 
 var builder = WebApplication.CreateBuilder(args);
 var config = builder.Configuration;
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddTransient<IEmailService, SendGridEmailService>();
+
+var abacatePaySettings = builder.Configuration.GetSection("AbacatePaySettings");
+string apiKey = abacatePaySettings["ApiKey"];
+bool isSandbox = abacatePaySettings.GetValue<bool>("IsSandbox");
+builder.Services.AddSingleton<dynamic>(sp => 
+{
+    return new Abacatepay.AbacatePay(apiKey, isSandbox);
+});
 
 builder.Services.AddSwaggerGen(options =>
 {
@@ -51,6 +58,11 @@ builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IBlogService, BlogService>();
 builder.Services.AddScoped<ICourseService, CourseService>();
 builder.Services.AddScoped<ISignaturePlanService, SignaturePlanService>();
+builder.Services.AddScoped<IPagamentoService>(sp => 
+{
+    var abacatePayClient = sp.GetRequiredService<dynamic>();
+    return new PagamentoService(abacatePayClient, sp.GetRequiredService<ILogger<PagamentoService>>(), sp.GetRequiredService<AppDbContext>());
+});
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(config.GetConnectionString("DefaultConnection"))

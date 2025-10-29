@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ApiInescafe.DTOs.Auth;
 using ApiInescafe.Services.Interfaces;
+using ApiInescafe.DTOs;
+using System.Security.Claims;
 
 namespace ApiInescafe.Controller;
 [ApiController]
@@ -63,4 +65,46 @@ public class AuthController : ControllerBase
             return StatusCode(500, new { message = "Ocorreu um erro interno.", error = ex.Message });
         }
     }
-}
+
+    [HttpPost("addPersonalInformations")]
+    [Authorize]
+    public async Task<IActionResult> AddPersonalInformations([FromBody] PersonalInfoDto personalInfoDto)
+    {
+        var userIdString = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        if (string.IsNullOrEmpty(userIdString))
+        {
+            return Unauthorized();
+        }
+        if (!int.TryParse(userIdString, out int userId))
+        {
+            return BadRequest(new { Message = "Formato do ID de usuário no token é inválido." });
+        }
+        var result = await _userService.AddPersonalInformations(personalInfoDto, userId);
+        if (result.Status == true)
+        {
+            return Ok(result);
+        }
+        return BadRequest(result);
+    }
+
+    [HttpPost("addAddressInformations")]
+    [Authorize]
+    public async Task<IActionResult> AddAddressInformations([FromBody] AddressInfoDto addressInfo)
+    {
+        var userIdString = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        if (string.IsNullOrEmpty(userIdString))
+        {
+            return Unauthorized();
+        }
+        if (!int.TryParse(userIdString, out int userId))
+        {
+            return BadRequest(new { Message = "Formato do ID de usuário no token é inválido." });
+        }
+        var result = await _userService.AddAddressInformations(addressInfo, userId);
+        if (result.Status == true)
+        {
+            return Ok(result);
+        }
+        return BadRequest(result);
+    }
+    }
