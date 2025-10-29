@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>INESCAFÉ - CHEF</title>
+    <title>INESCAFÉ - NEWSLETTER</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../css/menu.css">
-    <link rel="stylesheet" href="../css/footer.css"/>
-    <link rel="stylesheet" href="../css/page/tela_compras.css"/>
-    <link rel="stylesheet" href="../css/tools/container_universal.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/footer.css"/>
+    <link rel="stylesheet" href="./css/newsletter.css"/>
 
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
@@ -23,17 +23,17 @@
 <body>
     <header>
         <div class="header-container">
-            <img src="../img/INESCAFÉ (1).svg" alt="Logo INESCafé" class="logo" />
+            <img src="./img/INESCAFÉ (1).svg" alt="Logo INESCafé" class="logo" />
 
             <div class="header-nav-line">
                 <nav>
                     <ul>
                         <li><a href="home.html">Home</a></li>
-                        <li><a href="chef.html">Chef</a></li>
+                        <li><a href="chef.html" >Chef</a></li>
                         <li><a href="./curiosidades.html">Curiosidades</a></li>
                         <li><a href="catalogo.html">Catálogo</a></li>
                         <li><a href="cursoscatalogo.html">Cursos</a></li>
-                        <li><a href="newsletter.html">Newsletter</a></li>
+                        <li><a href="newsletter.html" class="ativo">Newsletter</a></li>
 
                         <!-- Dropdown correto -->
                         <li>
@@ -50,82 +50,69 @@
                 <div class="acessibilidade" aria-label="Ferramentas de acessibilidade">
                     <ul class="teste">
                         <li>
-                            <img class="imgacss" src="../img/acessibilidade.png" alt="Acessibilidade">
+                            <button class="menu"><i class="fa-solid fa-universal-access"></i></button>
                             <ul class="dropdown">
-                                <li><img id="alternar-contraste" class="icone" src="../img/ico-altocontraste.png"
+                                <li><img class="modes" id="toggleTema" src="./img/lua-crescente.png" alt=""></li>
+                                <li><img class="modes" id="alerta" src="./img/alerta.png"></li>
+                                <li><img id="alternar-contraste" class="icone" src="./img/ico-altocontraste.png"
                                         alt="Contraste"></li>
-                                <li><img id="aumentar-texto" class="icone" src="../img/ico-amais.png"
+                                <li><img id="aumentar-texto" class="icone" src="./img/ico-amais.png"
                                         alt="Aumentar texto"></li>
-                                <li><img id="diminuir-texto" class="icone" src="../img/ico-amenos.png"
+                                <li><img id="diminuir-texto" class="icone" src="./img/ico-amenos.png"
                                         alt="Diminuir texto"></li>
-                                <li><img id="libras" class="icone" src="../img/ico-libras.png" alt="Libras"></li>
-                                <li><img id="preto-e-branco" class="icone" src="../img/ico-pretobranco.png"
+                                <li><img id="libras" class="icone" src="./img/ico-libras.png" alt="Libras"></li>
+                                <li><img id="preto-e-branco" class="icone" src="./img/ico-pretobranco.png"
                                         alt="Preto e branco"></li>
-                                <li><img id="comando-de-voz" class="icone" src="../img/ico-voz.png" alt="Comando de voz">
+                                <li><img id="comando-de-voz" class="icone" src="./img/ico-voz.png" alt="Comando de voz">
                                 </li>
                             </ul>
                         </li>
                     </ul>
 
+                    <button class="menu"><i class="fa-solid fa-bag-shopping"></i></button>
+                    <button class="menu"><i class="fas fa-user"></i></button>
+
                     <!--<button class="darkmode" id="toggleTema" title="Alternar tema"><img src="./img/lua-crescente.png" alt=""></button> -->
                     <!--<button class="alertamode" id="alerta" title="Ajuda de acessibilidade"><img src="./img/alerta.png" alt=""></button> -->
-                    <img class="modes" id="toggleTema" src="../img/lua-crescente.png" alt="">
-                    <img class="modes" id="alerta" src="../img/alerta.png">
-                    <img class="modes" id="shop" src="../img/shopping-bag.png">
+                    <!--<img class="modes" id="toggleTema" src="./img/lua-crescente.png" alt="">-->
+                    <!--<img class="modes" id="alerta" src="./img/alerta.png">-->
+                    <!--<img class="modes" id="shop" src="./img/shopping-bag.png">-->
                 </div>
             </div>
         </div>
+
     </header>
 
 <main>
+
     <div class="main-content">
-        <hr class="divider">
-        <div class="divisao_containers">
-            <div class="text_titulo_pagina">
-                <h1>☕ Prensa Francesa INESCAFÉ Elegance</h1>
-            </div>
-            <div class="produto-info-box">
-                <img src="../img/img/tela_compras/imagem_cafeteira_francesa.png" alt="Prensa Francesa INESCAFÉ Elegance" class="imagem_produto">
-                <div class="produto-detalhes">
-                    <p><strong>Nome:</strong> Prensa Francesa INESCAFÉ Elegance</p>
-                    <p><strong>Descrição:</strong> Prensa francesa de alta qualidade para cafés especiais.</p>
-                    <p><strong>Capacidade:</strong> 600ml</p>
-                    <p><strong>Preço:</strong> <span class="preco-produto">R$ 189,90</span></p>
+        <h2 class="newsletter-title">AJUDE-NOS A ESCREVER NOSSA NEWSLETTER</h2>
+        <hr class="newsletter-divider">
+        <div class="newsletter-flex-container">
+            <img src="../projeto ines/img/imagem_com_cafe_na_mao.png" alt="Newsletter" class="newsletter-img">
+            <div class="body-content-container">
+                <h3 class="h3-content_titulo1">Todo dia começa melhor com um bom café — e com boas histórias.</h3>
+                <br>                
+                <p>Na nossa newsletter, você descobre mais do que sabores:</p>
+                <p>receitas irresistíveis direto da nossa cozinha, segredos de baristas apaixonados, novas</p>
+                <p>combinações de grãos e quitutes que vão muito além do pão de queijo.</p>
+                <p>Conheça cafeterias inspiradoras, aprenda truques para preparar o café perfeito em casa</p>
+                <p>e descubra tendências que estão aquecendo o cenário da cafeína no Brasil.</p>
+                <br><br>
+                <p>☕ Receba um gole de inspiração na sua caixa de entrada.</p>
+                <div class="newsletter-checkbox-container">
+                    <input type="checkbox" id="newsletterCheck">
+                    <label for="newsletterCheck">Você deseja receber nossa newsletter?</label>
                 </div>
             </div>
-            <div class="pagamento-box">
-                <h2>Métodos de Pagamento</h2>
-                <table class="tabela-pagamento">
-                    <thead>
-                        <tr>
-                            <th>Método</th>
-                            <th>Parcelamento</th>
-                            <th>Taxa</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <button type="button" class="btn btn-outline-primary btn-sm metodo-pagamento" style="font-size: 3.0rem;">Pix</button>
-                            </td>
-                            <td>À vista</td>
-                            <td>Sem juros</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="finalizar-compra">
-                <button class="btn btn-success btn-lg" 
-                style="background-color: #781D42; 
-                border-radius: 30px; 
-                margin-bottom: 5%;
-                font-size: xx-large;
-                font-weight: 400;
-                width: 400px;
-                ">Finalizar Compra</button>
-            </div>
+        </div>
+        
+        <div class="newsletter">
+            <input type="email" placeholder="Seu e-mail">
+            <button>SUBSCRIBE</button>
         </div>
     </div>
+        
 </main>
         
     <!-- Footer -->
@@ -179,9 +166,7 @@
         </div>
     </footer>
 
-    <script src="../script.js"></script>
-    <script src="../js/tools/funcoes_da_tela_de_compras.js"></script>
-   
+    <script src="./script/script.js"></script>
 </body>
 
 </html>

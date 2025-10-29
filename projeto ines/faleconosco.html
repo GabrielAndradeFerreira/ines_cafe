@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INESCAFÉ - FALE CONOSCO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/faleconosco.css" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+
+</head>
+
+<body>
+    <header>
+    <div class="header-container">
+        <img src="./img/INESCAFÉ (1).svg" alt="Logo INESCafé" class="logo" />
+
+        <div class="header-nav-line">
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="chef.html">Chef</a></li>
+                    <li><a href="./curiosidades.html">Curiosidades</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="cursoscatalogo.html">Cursos</a></li>
+                    <li><a href="newsletter.html">Newsletter</a></li>
+
+                    <!-- Dropdown correto -->
+                    <li>
+                        <a class="maisBtn">Mais</a>
+                        <ul class="dropdown_menu">
+                            <li><a href="../html/tela_assinaturas.html">Planos de fidelidade</a></li>
+                            <li><a href="./curiosidades.html">Curiosidades</a></li>
+                            <li><a href="./faleconosco.html">Fale Conosco</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="acessibilidade" aria-label="Ferramentas de acessibilidade">
+                <ul class="teste">
+                    <li>
+                        <button class="menu"><i class="fa-solid fa-universal-access"></i></button>
+                        <ul class="dropdown">
+                            <li><img class="modes" id="toggleTema" src="./img/lua-crescente.png" alt=""></li>
+                            <li><img class="modes" id="alerta" src="./img/alerta.png"></li>
+                            <li><img id="alternar-contraste" class="icone" src="./img/ico-altocontraste.png"
+                                    alt="Contraste"></li>
+                            <li><img id="aumentar-texto" class="icone" src="./img/ico-amais.png" alt="Aumentar texto">
+                            </li>
+                            <li><img id="diminuir-texto" class="icone" src="./img/ico-amenos.png" alt="Diminuir texto">
+                            </li>
+                            <li><img id="libras" class="icone" src="./img/ico-libras.png" alt="Libras"></li>
+                            <li><img id="preto-e-branco" class="icone" src="./img/ico-pretobranco.png"
+                                    alt="Preto e branco"></li>
+                            <li><img id="comando-de-voz" class="icone" src="./img/ico-voz.png" alt="Comando de voz">
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <button class="menu"><i class="fa-solid fa-bag-shopping"></i></button>
+                <button class="menu"><i class="fas fa-user"></i></button>
+
+                <!--<button class="darkmode" id="toggleTema" title="Alternar tema"><img src="./img/lua-crescente.png" alt=""></button> -->
+                <!--<button class="alertamode" id="alerta" title="Ajuda de acessibilidade"><img src="./img/alerta.png" alt=""></button> -->
+                <!--<img class="modes" id="toggleTema" src="./img/lua-crescente.png" alt="">-->
+                <!--<img class="modes" id="alerta" src="./img/alerta.png">-->
+                <!--<img class="modes" id="shop" src="./img/shopping-bag.png">-->
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="contato">
+            <h2 class="titulos">Vamos tomar <span class="cor">um cafezinho?</span></h2>
+            <div class="contato-flex">
+                <img  class="contatoimg" src="./img/img_contato.png" alt="">
+
+                <div class="cards"> <!-- sou a segunda coluna -->
+
+                    <div class="contato-cards"> <!-- aqui temos informações do email -->
+                        <div><i class="fa-solid fa-envelope"></i></div> <!-- sou o icone -->
+                        <div> <!-- sou o texto -->
+                            <p class="cinza">email</p>
+                            <p>contato@inescafe.com.br</p>
+                        </div> <!-- sou o texto -->
+                    </div>
+
+                    <div class="contato-cards"> <!-- aqui temos informações do telefone -->
+                        <div><i class="fa-brands fa-whatsapp"></i></div> <!-- sou o icone -->
+                        <div> <!-- sou o texto -->
+                            <p class="cinza">telefone</p>
+                            <p>(11) 91234-5678</p>
+                        </div> <!-- sou o texto -->
+                    </div>
+
+                    <div class="contato-cards"> <!-- aqui temos informações do endereço -->
+                        <div><i class="fa-solid fa-location-dot"></i></div> <!-- sou o icone -->
+                        <div> <!-- sou o texto -->
+                            <p class="cinza">endereço</p>
+                            <p>Rua Antônia Rosa Fioravanti, 180</p>
+                            <p>Mauá</p>
+                        </div> <!-- sou o texto -->
+                    </div>
+                </div> 
+
+                <div> <!-- sou a terceira coluna -->
+                    <form action="mailto:contato@littlehelp.com.br" method="post" enctype="text/plain">
+                        <div class="caixa">
+                            <label for="">nome</label><br>
+                            <input type="text" id="nome" name="nome">
+                        </div>
+                        
+                        <div class="caixa">
+                            <label for="">email</label><br>
+                            <input type="text" id="email" name="email">
+                        </div>
+                        
+                        <div class="caixa">
+                            <label for="">telefone</label><br>
+                            <input type="text" id="telefone" name="telefone">
+                        </div>
+
+                        <div class="caixa">
+                            <label for="">mensagem</label><br>
+                            <textarea rows="7" type="text" id="mensagem" name="mensagem"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="botao" onclick="msg()">enviar</button>
+                    </form>
+                </div> 
+            </div>
+        </section>
+
+        <h2 class="DUVIDA">Dúvidas Frequentes ☕</h2>
+
+<div class="faq">
+
+  <div class="faq-item">
+    <div class="faq-question">O que é o BoxCafé?</div>
+    <div class="faq-answer">
+      O BoxCafé é uma assinatura mensal onde você recebe cafés selecionados, brindes e descontos exclusivos.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Quais são as formas de pagamento?</div>
+    <div class="faq-answer">
+      Aceitamos cartão de crédito, PIX e boleto bancário. Para assinaturas, recomendamos o PIX recorrente.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Posso cancelar minha assinatura?</div>
+    <div class="faq-answer">
+      Sim! Você pode cancelar a qualquer momento entrando em contato com o SAC ou acessando sua conta.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Vocês fazem entregas para todo o Brasil?</div>
+    <div class="faq-answer">
+      Sim! Enviamos para todas as regiões do Brasil, com prazos de 3 a 7 dias úteis.
+    </div>
+  </div>
+
+</div>
+
+<footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Sobre Nós</h3>
+                <p>La Cucina Italiana é o seu guia definitivo para</p>
+                <p>a autêntica culinária italiana. Compartilhamos</p>
+                <p>receitas tradicionais, técnicas e histórias da Itália.</p>
+                <div class="social-icons">
+                    <a href="https://web.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.pinterest.com"><i class="fab fa-pinterest"></i></a>
+                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Links Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="html/receitas.html">Receitas</a></li>
+                    <li><a href="https://www.youtube.com/">Vídeos</a></li>
+                    <li><a href="#">Dicas de Chefs</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Categorias</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Massas</a></li>
+                    <li><a href="#">Pizzas</a></li>
+                    <li><a href="#">Risotos</a></li>
+                    <li><a href="#">Sobremesas</a></li>
+                    <li><a href="#">Pães</a></li>
+                    <li><a href="#">Vinhos</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Inscreva-se para receber nossas melhores receitas e dicas exclusivas!</p>
+                <div class="newsletter">
+                    <input type="email" placeholder="Seu e-mail">
+                    <button>Inscrever-se</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; © 2025 Inescafé - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+<script src="./script/script.js"></script>
+<script src="./script/script_faleconosco.js"></script>
+
+</body>
+</html>

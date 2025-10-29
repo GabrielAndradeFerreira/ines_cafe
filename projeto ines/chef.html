@@ -8,28 +8,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../css/menu.css">
-    <link rel="stylesheet" href="../css/footer.css"/>
-    <link rel="stylesheet" href="../css/page/tela_compras.css"/>
-    <link rel="stylesheet" href="../css/tools/container_universal.css"/>
-
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-    </style>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/chef.css" />
+    <link rel="stylesheet" href="./css/footer.css">
 </head>
 
 <body>
     <header>
         <div class="header-container">
-            <img src="../img/INESCAFÉ (1).svg" alt="Logo INESCafé" class="logo" />
+            <img src="./img/INESCAFÉ (1).svg" alt="Logo INESCafé" class="logo" />
 
             <div class="header-nav-line">
                 <nav>
                     <ul>
                         <li><a href="home.html">Home</a></li>
-                        <li><a href="chef.html">Chef</a></li>
+                        <li><a href="chef.html" class="ativo">Chef</a></li>
                         <li><a href="./curiosidades.html">Curiosidades</a></li>
                         <li><a href="catalogo.html">Catálogo</a></li>
                         <li><a href="cursoscatalogo.html">Cursos</a></li>
@@ -50,84 +44,100 @@
                 <div class="acessibilidade" aria-label="Ferramentas de acessibilidade">
                     <ul class="teste">
                         <li>
-                            <img class="imgacss" src="../img/acessibilidade.png" alt="Acessibilidade">
+                            <button class="menu"><i class="fa-solid fa-universal-access"></i></button>
                             <ul class="dropdown">
-                                <li><img id="alternar-contraste" class="icone" src="../img/ico-altocontraste.png"
+                                <li><img class="modes" id="toggleTema" src="./img/lua-crescente.png" alt=""></li>
+                                <li><img class="modes" id="alerta" src="./img/alerta.png"></li>
+                                <li><img id="alternar-contraste" class="icone" src="./img/ico-altocontraste.png"
                                         alt="Contraste"></li>
-                                <li><img id="aumentar-texto" class="icone" src="../img/ico-amais.png"
+                                <li><img id="aumentar-texto" class="icone" src="./img/ico-amais.png"
                                         alt="Aumentar texto"></li>
-                                <li><img id="diminuir-texto" class="icone" src="../img/ico-amenos.png"
+                                <li><img id="diminuir-texto" class="icone" src="./img/ico-amenos.png"
                                         alt="Diminuir texto"></li>
-                                <li><img id="libras" class="icone" src="../img/ico-libras.png" alt="Libras"></li>
-                                <li><img id="preto-e-branco" class="icone" src="../img/ico-pretobranco.png"
+                                <li><img id="libras" class="icone" src="./img/ico-libras.png" alt="Libras"></li>
+                                <li><img id="preto-e-branco" class="icone" src="./img/ico-pretobranco.png"
                                         alt="Preto e branco"></li>
-                                <li><img id="comando-de-voz" class="icone" src="../img/ico-voz.png" alt="Comando de voz">
+                                <li><img id="comando-de-voz" class="icone" src="./img/ico-voz.png" alt="Comando de voz">
                                 </li>
                             </ul>
                         </li>
                     </ul>
 
+                    <button class="menu"><i class="fa-solid fa-bag-shopping"></i></button>
+                    <button class="menu"><i class="fas fa-user"></i></button>
+
                     <!--<button class="darkmode" id="toggleTema" title="Alternar tema"><img src="./img/lua-crescente.png" alt=""></button> -->
                     <!--<button class="alertamode" id="alerta" title="Ajuda de acessibilidade"><img src="./img/alerta.png" alt=""></button> -->
-                    <img class="modes" id="toggleTema" src="../img/lua-crescente.png" alt="">
-                    <img class="modes" id="alerta" src="../img/alerta.png">
-                    <img class="modes" id="shop" src="../img/shopping-bag.png">
+                    <!--<img class="modes" id="toggleTema" src="./img/lua-crescente.png" alt="">-->
+                    <!--<img class="modes" id="alerta" src="./img/alerta.png">-->
+                    <!--<img class="modes" id="shop" src="./img/shopping-bag.png">-->
                 </div>
             </div>
         </div>
+
     </header>
 
-<main>
-    <div class="main-content">
-        <hr class="divider">
-        <div class="divisao_containers">
-            <div class="text_titulo_pagina">
-                <h1>☕ Prensa Francesa INESCAFÉ Elegance</h1>
+
+    <main>
+        <section class="chef">
+            <div class="texto">
+                <h2>Pedro Lima</h2>
+                <p>
+                    Tudo começou com um gole. Um gole de café bem tirado, encorpado, com aroma intenso e final marcante.
+                    Foi ali que Pedro Lima — barista por vocação e empreendedor por paixão — descobriu que o café podia
+                    ser muito mais do que uma bebida: podia ser uma experiência.
+                </p>
+                <p>
+                    Aos 26 anos, Pedro transformou essa paixão em um propósito. Nasceu então a nossa cafeteria
+                    artesanal,
+                    um espaço criado para quem valoriza os detalhes, a origem, o preparo e, claro, o sabor de um bom
+                    café especial.
+                </p>
             </div>
-            <div class="produto-info-box">
-                <img src="../img/img/tela_compras/imagem_cafeteira_francesa.png" alt="Prensa Francesa INESCAFÉ Elegance" class="imagem_produto">
-                <div class="produto-detalhes">
-                    <p><strong>Nome:</strong> Prensa Francesa INESCAFÉ Elegance</p>
-                    <p><strong>Descrição:</strong> Prensa francesa de alta qualidade para cafés especiais.</p>
-                    <p><strong>Capacidade:</strong> 600ml</p>
-                    <p><strong>Preço:</strong> <span class="preco-produto">R$ 189,90</span></p>
-                </div>
+            <div class="imagem">
+                <img src="img/image 1.svg" alt="Pedro Lima sorrindo com uma xícara de café" />
             </div>
-            <div class="pagamento-box">
-                <h2>Métodos de Pagamento</h2>
-                <table class="tabela-pagamento">
-                    <thead>
-                        <tr>
-                            <th>Método</th>
-                            <th>Parcelamento</th>
-                            <th>Taxa</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <button type="button" class="btn btn-outline-primary btn-sm metodo-pagamento" style="font-size: 3.0rem;">Pix</button>
-                            </td>
-                            <td>À vista</td>
-                            <td>Sem juros</td>
-                        </tr>
-                    </tbody>
-                </table>
+        </section>
+
+        <section class="chef invertido">
+            <div class="imagem">
+                <img src="img/image 3.svg" alt="Dona Inês sorrindo com café e pães" />
             </div>
-            <div class="finalizar-compra">
-                <button class="btn btn-success btn-lg" 
-                style="background-color: #781D42; 
-                border-radius: 30px; 
-                margin-bottom: 5%;
-                font-size: xx-large;
-                font-weight: 400;
-                width: 400px;
-                ">Finalizar Compra</button>
+            <div class="texto">
+                <h2>Dona Inês</h2>
+                <p>
+                    Dona Inês sempre acreditou que o café era mais do que uma bebida — era um gesto de cuidado.
+                    Desde cedo, Pedro a observava preparar cada xícara com atenção e carinho, transformando momentos
+                    simples em encontros especiais.
+                </p>
+                <p>
+                    Entre aromas quentes e conversas na cozinha, nasceu nele a paixão pelo ritual do café.
+                    Foi ela quem o incentivou a seguir esse caminho, mostrando que o sabor mais marcante vem do que é
+                    feito com amor.
+                </p>
             </div>
-        </div>
-    </div>
-</main>
-        
+        </section>
+
+        <section class="espaco">
+            <div class="texto">
+                <h2>Um cantinho com alma e aroma de casa</h2>
+                <p>
+                    Ao entrar na Inescafé, é impossível não sentir como se estivesse chegando na casa de alguém querido.
+                    A fachada charmosa, com cores terrosas e janelas abertas, convida para um momento de pausa.
+                </p>
+                <p>
+                    A iluminação suave, o aroma de café recém-passado e o som ambiente criam uma experiência sensorial
+                    que acalma e envolve. A Inescafé é mais do que uma cafeteria: é um refúgio urbano onde o tempo
+                    desacelera
+                    e o café ganha significado.
+                </p>
+            </div>
+            <div class="imagem">
+                <img src="img/image 4.svg" alt="Fachada da cafeteria Inescafé" />
+            </div>
+        </section>
+    </main>
+
     <!-- Footer -->
     <footer>
         <div class="footer-content">
@@ -179,9 +189,7 @@
         </div>
     </footer>
 
-    <script src="../script.js"></script>
-    <script src="../js/tools/funcoes_da_tela_de_compras.js"></script>
-   
+    <script src="./script/script.js"></script>
 </body>
 
 </html>

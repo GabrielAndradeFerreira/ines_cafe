@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INESCAFÉ - CURIOSIDADES</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/curiosidades.css" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img src="./img/INESCAFÉ (1).svg" alt="Logo INESCafé" class="logo" />
+
+            <div class="header-nav-line">
+                <nav>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="chef.html">Chef</a></li>
+                        <li><a href="curiosidades.html" class="ativo">Curiosidades</a></li>
+                        <li><a href="catalogo.html">Catálogo</a></li>
+                        <li><a href="cursoscatalogo.html">Cursos</a></li>
+                        <li><a href="newsletter.html">Newsletter</a></li>
+
+                        <!-- Dropdown correto -->
+                        <li>
+                            <a class="maisBtn">Mais</a>
+                            <ul class="dropdown_menu">
+                                <li><a href="../html/tela_assinaturas.html">Planos de fidelidade</a></li>
+                                <li><a href="./curiosidades.html">Curiosidades</a></li>
+                                <li><a href="./faleconosco.html">Fale Conosco</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="acessibilidade" aria-label="Ferramentas de acessibilidade">
+                    <ul class="teste">
+                        <li>
+                            <button class="menu"><i class="fa-solid fa-universal-access"></i></button>
+                            <ul class="dropdown">
+                                <li><img class="modes" id="toggleTema" src="./img/lua-crescente.png" alt=""></li>
+                                <li><img class="modes" id="alerta" src="./img/alerta.png"></li>
+                                <li><img id="alternar-contraste" class="icone" src="./img/ico-altocontraste.png"
+                                        alt="Contraste"></li>
+                                <li><img id="aumentar-texto" class="icone" src="./img/ico-amais.png"
+                                        alt="Aumentar texto">
+                                </li>
+                                <li><img id="diminuir-texto" class="icone" src="./img/ico-amenos.png"
+                                        alt="Diminuir texto">
+                                </li>
+                                <li><img id="libras" class="icone" src="./img/ico-libras.png" alt="Libras"></li>
+                                <li><img id="preto-e-branco" class="icone" src="./img/ico-pretobranco.png"
+                                        alt="Preto e branco"></li>
+                                <li><img id="comando-de-voz" class="icone" src="./img/ico-voz.png" alt="Comando de voz">
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <button class="menu"><i class="fa-solid fa-bag-shopping"></i></button>
+                    <button class="menu"><i class="fas fa-user"></i></button>
+
+                    <!--<button class="darkmode" id="toggleTema" title="Alternar tema"><img src="./img/lua-crescente.png" alt=""></button> -->
+                    <!--<button class="alertamode" id="alerta" title="Ajuda de acessibilidade"><img src="./img/alerta.png" alt=""></button> -->
+                    <!--<img class="modes" id="toggleTema" src="./img/lua-crescente.png" alt="">-->
+                    <!--<img class="modes" id="alerta" src="./img/alerta.png">-->
+                    <!--<img class="modes" id="shop" src="./img/shopping-bag.png">-->
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <!--CATALOGO DE MINI CURSOS-->
+
+    <section class="catalogo">
+        <h1>Aqui, café é arte</h1>
+
+        <!-- Vídeo 1 -->
+        <div class="video-card">
+            <a href="https://youtube.com/shorts/L4AxJvmTP_c" target="_blank" class="video-link">
+                <div class="video-thumbnail-container">
+                    <img src="./img/curiosidades1.jpg" alt="Como preparar o café perfeito" class="video-thumbnail">
+                    <span class="play-button" aria-label="Reproduzir vídeo no YouTube"></span>
+                </div>
+            </a>
+            <div class="video-info">
+                <h2>Como preparar o café perfeito</h2>
+                <p>Aprenda técnicas rápidas e práticas para medir as proporções do seu café.</p>
+                <p class="aviso">Assista diretamente pelo YouTube</p>
+            </div>
+        </div>
+
+
+        <!-- Vídeo 2 -->
+        <div class="video-card">
+            <a href="https://youtube.com/shorts/GtFIYBq-eAA?si=XOdjn2rfDPKkyxEC" target="_blank" class="video-link">
+                <div class="video-thumbnail-container">
+                    <img src="./img/curiosidades2.jpg" alt="Como preparar o café perfeito" class="video-thumbnail">
+                    <span class="play-button" aria-label="Reproduzir vídeo no YouTube"></span>
+                </div>
+            </a>
+            <div class="video-info">
+                <h2>Aprenda a fazer artes no café</h2>
+                <p>Aprenda técnicas rápidas e práticas para apresentar seu café.</p>
+                <p class="aviso">Assista diretamente pelo YouTube</p>
+            </div>
+        </div>
+
+        <!-- Vídeo 3 -->
+        <div class="video-card">
+            <a href="https://youtube.com/shorts/lBigq23uZzM?si=kKoJwnbNI6g-uESD" target="_blank" class="video-link">
+                <div class="video-thumbnail-container">
+                    <img src="./img/curiosidades3.jpg" alt="Como preparar o café perfeito" class="video-thumbnail">
+                    <span class="play-button" aria-label="Reproduzir vídeo no YouTube"></span>
+                </div>
+            </a>
+            <div class="video-info">
+                <h2>Aprenda a técnica snow feeding de vez!</h2>
+                <p>Aprenda em 30 segundos técnicas rápidas e práticas para melhorar seu café.</p>
+                <p class="aviso">Assista diretamente pelo YouTube</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="catalogo2">
+        <div class="video-card2" data-video-id="arGg77u-F5c">
+    <a href="#" class="open-video-trigger"> 
+        <div class="video-thumbnail-container2">
+            <img src="./img/curiosidades1.jpg" alt="Como preparar o café perfeito" class="video-thumbnail2">
+            <span class="play-button" aria-label="Reproduzir vídeo"></span> 
+        </div>
+    </a>
+            <div class="video-info2">
+                <h2>DICAS PARA MELHORAR SEU CAFÉ COADO | Mohamad Hindi</h2>
+                <p>Quer fazer aquele café perfeito? ☕ No vídeo de hoje, o Mohamad ensina como passar café do jeito
+                    certo, com todas as dicas pra extrair o máximo dos grãos – sem desperdício! Ele compartilha macetes
+                    sobre temperatura, tempo de infusão e o jeito certo de despejar a água.</p>
+                <p class="aviso">Assista diretamente pelo YouTube</p>
+            </div>
+    </section>
+    
+
+    <section class="catalogo">
+
+        <!-- Vídeo 1 -->
+        <div class="video-card">
+            <a href="https://youtube.com/shorts/L4AxJvmTP_c" target="_blank" class="video-link">
+                <div class="video-thumbnail-container">
+                    <img src="./img/curiosidades1.jpg" alt="Como preparar o café perfeito" class="video-thumbnail">
+                    <span class="play-button" aria-label="Reproduzir vídeo no YouTube"></span>
+                </div>
+            </a>
+            <div class="video-info">
+                <h2>Como preparar o café perfeito</h2>
+                <p>Aprenda técnicas rápidas e práticas para medir as proporções do seu café.</p>
+                <p class="aviso">Assista diretamente pelo YouTube</p>
+            </div>
+        </div>
+
+
+        <!-- Vídeo 2 -->
+        <div class="video-card">
+            <a href="https://youtube.com/shorts/GtFIYBq-eAA?si=XOdjn2rfDPKkyxEC" target="_blank" class="video-link">
+                <div class="video-thumbnail-container">
+                    <img src="./img/curiosidades2.jpg" alt="Como preparar o café perfeito" class="video-thumbnail">
+                    <span class="play-button" aria-label="Reproduzir vídeo no YouTube"></span>
+                </div>
+            </a>
+            <div class="video-info">
+                <h2>Aprenda a fazer artes no café</h2>
+                <p>Aprenda técnicas rápidas e práticas para apresentar seu café.</p>
+                <p class="aviso">Assista diretamente pelo YouTube</p>
+            </div>
+        </div>
+
+        <!-- Vídeo 3 -->
+        <div class="video-card">
+            <a href="https://youtube.com/shorts/lBigq23uZzM?si=kKoJwnbNI6g-uESD" target="_blank" class="video-link">
+                <div class="video-thumbnail-container">
+                    <img src="./img/curiosidades3.jpg" alt="Como preparar o café perfeito" class="video-thumbnail">
+                    <span class="play-button" aria-label="Reproduzir vídeo no YouTube"></span>
+                </div>
+            </a>
+            <div class="video-info">
+                <h2>Aprenda a técnica snow feeding de vez!</h2>
+                <p>Aprenda em 30 segundos técnicas rápidas e práticas para melhorar seu café.</p>
+                <p class="aviso">Assista diretamente pelo YouTube</p>
+            </div>
+        </div>
+
+         <!-- Vídeo 4 -->
+        <div class="video-card">
+            <a href="https://youtube.com/shorts/L4AxJvmTP_c" target="_blank" class="video-link">
+                <div class="video-thumbnail-container">
+                    <img src="./img/curiosidades1.jpg" alt="Como preparar o café perfeito" class="video-thumbnail">
+                    <span class="play-button" aria-label="Reproduzir vídeo no YouTube"></span>
+                </div>
+            </a>
+            <div class="video-info">
+                <h2>Como preparar o café perfeito</h2>
+                <p>Aprenda técnicas rápidas e práticas para medir as proporções do seu café.</p>
+                <p class="aviso">Assista diretamente pelo YouTube</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal" id="videoModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="videoFrame" allowfullscreen></iframe>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Sobre Nós</h3>
+                <p>La Cucina Italiana é o seu guia definitivo para</p>
+                <p>a autêntica culinária italiana. Compartilhamos</p>
+                <p>receitas tradicionais, técnicas e histórias da Itália.</p>
+                <div class="social-icons">
+                    <a href="https://web.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.pinterest.com"><i class="fab fa-pinterest"></i></a>
+                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Links Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="html/receitas.html">Receitas</a></li>
+                    <li><a href="https://www.youtube.com/">Vídeos</a></li>
+                    <li><a href="#">Dicas de Chefs</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Categorias</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Massas</a></li>
+                    <li><a href="#">Pizzas</a></li>
+                    <li><a href="#">Risotos</a></li>
+                    <li><a href="#">Sobremesas</a></li>
+                    <li><a href="#">Pães</a></li>
+                    <li><a href="#">Vinhos</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Inscreva-se para receber nossas melhores receitas e dicas exclusivas!</p>
+                <div class="newsletter">
+                    <input type="email" placeholder="Seu e-mail">
+                    <button>Inscrever-se</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; © 2025 Inescafé - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="./script/script.js"></script>
+    <script src="./script/script_faleconosco.js"></script>
+    <script src="./script/curiosidades.js"></script>
+
+</body>
+
+</html>
